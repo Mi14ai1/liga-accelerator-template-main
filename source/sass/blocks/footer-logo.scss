@@ -1,0 +1,16 @@
+.footer-logo svg {
+  fill: $logo-default-color;
+
+  @media #{$middle-vp} {
+    width: 38px;
+    height: 20px;
+  }
+}
+
+.footer-logo {
+  @media #{$narrow-vp} {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+}

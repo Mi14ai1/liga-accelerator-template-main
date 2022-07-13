@@ -1,0 +1,12 @@
+.social a {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.social svg {
+  @media #{$not-wide-vp} {
+    width: 16px;
+    height: 16px;
+  }
+}

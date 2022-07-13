@@ -1,0 +1,155 @@
+.navigation {
+  display: flex;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 33px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media #{$middle-vp} {
+    gap: 24px;
+    margin-top: -2px;
+  }
+
+  @media #{$narrow-vp} {
+    grid-area: 2/1/2/2;
+    flex-direction: column;
+  }
+}
+
+.navigation__link {
+  font-family: $ff-montserrat;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-default-white;
+  text-decoration: none;
+
+  @media #{$middle-vp} {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media #{$narrow-vp} {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $color-tangaroa;
+  }
+}
+
+.navigation__logo {
+  fill: $color-tangaroa;
+
+  @media #{$not-narrow-vp} {
+    display: none;
+  }
+}
+
+
+.navigation__button {
+  box-sizing: border-box;
+  position: relative;
+  justify-self: right;
+  outline: none;
+  border: none;
+  background: transparent;
+  flex-shrink: 1;
+  width: 24px;
+  height: 12px;
+  align-self: center;
+  top: -2px;
+
+  &--open {
+    box-shadow:
+      0 -2px 0 0 $color-default-white inset,
+      0 2px 0 0 $color-default-white inset;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 100%;
+      background: $color-default-white;
+    }
+  }
+
+  &--close {
+    box-shadow: none;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      transform: translateY(-50%) rotate(45deg);
+      background: $color-tangaroa;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(-45deg);
+      width: 100%;
+      height: 2px;
+      background: $color-tangaroa;
+    }
+  }
+
+  @media #{$not-narrow-vp} {
+    display: none;
+  }
+}
+
+.navigation span {
+  position: absolute;
+  transform: scale(0);
+  top: 0;
+  left: 0;
+}
+
+.navigation--menu-close {
+  @media #{$narrow-vp} {
+    position: relative;
+
+    .navigation__logo {
+      position: absolute;
+      transform: scale(0);
+    }
+
+    .navigation__list {
+      position: absolute;
+      transform: scale(0);
+      right: 0;
+    }
+  }
+}
+
+.navigation--menu-open {
+  &--noscript {
+    position: relative;
+  }
+
+  @media #{$narrow-vp} {
+    position: absolute;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    right: 0;
+    top: 0;
+    padding: 20px 15px 20px;
+    max-width: 285px;
+    background: $color-alice-blue;
+  }
+}

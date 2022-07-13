@@ -13,7 +13,12 @@
 
 // Blocks
 // ---------------------------------
-
+@import "blocks/header";
+@import "blocks/header-logo";
+@import "blocks/navigation";
+@import "blocks/footer";
+@import "blocks/footer-logo";
+@import "blocks/social";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
