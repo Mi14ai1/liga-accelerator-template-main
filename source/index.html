@@ -64,7 +64,17 @@
           котиков и&nbsp;многое другое.</p>
       </div>
       <div class="article__image">
-        <img src="#" alt="Пингвины">
+        <picture>
+          <source media="(min-width: 1365.5px)" type="image/webp"
+            srcset="img/penguins-l.webp 1x, img/penguins-l@2x.webp 2x">
+          <source media="(min-width: 767.5px)" type="image/webp"
+            srcset="img/penguins-m.webp 1x, img/penguins-m@2x.webp 2x">
+          <source media="(min-width: 321px)" type="image/webp"
+            srcset="img/penguins-s.webp 1x, img/penguins-s@2x.webp 2x">
+          <img srcset="img/penguins-s.png 320w,
+                       img/penguins-m.png 768w" src="img/penguins-l.png" alt="Возможность посмотреть на пингвинов"
+            width="560" height="301">
+        </picture>
       </div>
     </section>
     <section class="advantages">
