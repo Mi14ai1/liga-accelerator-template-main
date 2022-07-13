@@ -48,7 +48,7 @@
     }
   }
 
-  @media (max-width: 412px) {
+  @media (max-width: 419.5px) {
     &::before {
       top: -66px;
       min-height: 500px;
@@ -75,9 +75,14 @@
 
   @media #{$middle-vp} {
     gap: 11px;
+    min-height: 583px;
     padding-top: 215px;
     padding-left: 45px;
     box-shadow: none;
+  }
+
+  @media (max-width: 767.5px) and (min-width: 419.5px) {
+    min-height: 583px;
   }
 
   @media #{$narrow-vp} {
@@ -85,6 +90,7 @@
     padding-top: 110px;
     padding-left: 15px;
     box-shadow: none;
+    min-height: 434px;
   }
 }
 
