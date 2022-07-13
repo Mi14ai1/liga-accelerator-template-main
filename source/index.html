@@ -12,29 +12,33 @@
 
 <body>
   <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <img src="#" alt="Круизы в Антарктиду">
+    <div class="header__wrapper header__grid">
+      <div class="heder-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="38">
+          <use href="img/logo.svg#logo"></use>
+        </svg>
       </div>
-      <nav class="navigation">
+      <nav class="navigation navigation--menu-close navigation--noscript">
         <div class="navigation__logo">
-          <img src="#" alt="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="22">
+            <use href="img/logo.svg#logo"></use>
+          </svg>
         </div>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#">Преимущества</a>
+            <a class="navigation__link" href="#">Преимущества</a>
           </li>
           <li class="navigation__item">
-            <a href="#">Направления</a>
+            <a class="navigation__link" href="#">Направления</a>
           </li>
           <li class="navigation__item">
-            <a href="#">Ближайшие круизы</a>
+            <a class="navigation__link" href="#">Ближайшие круизы</a>
           </li>
           <li class="navigation__item">
-            <a href="#">Контакты</a>
+            <a class="navigation__link" href="#">Контакты</a>
           </li>
         </ul>
-        <button class="navigation__button">
+        <button class="navigation__button navigation__button--open">
           <span>Меню</span>
         </button>
       </nav>
@@ -361,25 +365,55 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper footer__grid">
       <nav class="footer__navigation">
-        <div class="footer__logo">
-          <img src="#" alt="">
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="38">
+            <use href="img/logo.svg#logo"></use>
+          </svg>
         </div>
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a href="#">Преимущества</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#">Направления</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#">Ближайшие круизы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
       </nav>
-      <ul class="footer__social-list">
+      <ul class="footer__social-list social">
         <li class="footer__social-item">
-          <img src="#" alt="facebook">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <use href="img/social/social-sprite.svg#facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li>
-          <img src="#" alt="instagram">
+        <li class="footer__social-item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <use href="img/social/social-sprite.svg#instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li>
-          <img src="#" alt="twitter">
+        <li class="footer__social-item">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <use href="img/social/social-sprite.svg#twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
   </footer>
+
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

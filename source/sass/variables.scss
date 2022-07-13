@@ -7,12 +7,14 @@ $color-default-blue: #011c40;
 $color-default-solitude: #e3ecf6;
 $color-default-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
+$logo-default-color: #f9fbfd;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-tangaroa: #011c40;
 $color-torch-red: #ff1553;
+$color-alice-blue: #f9fbfd;
 
 // Gradient
 
@@ -52,6 +54,12 @@ $vp-1024: 1024px;
 $vp-1280: 1280px;
 $vp-1440: 1440px;
 $vp-1920: 1920px;
+
+$narrow-vp: "(max-width: 767.5px)";
+$not-narrow-vp: "(min-width: 768px)";
+$middle-vp: "(min-width: 768px) and (max-width: 1365.5px)";
+$wide-vp: "(min-width: 1366px)";
+$not-wide-vp: "(max-width: 1365.5px)";
 
 // Retina
 // ---------------------------------

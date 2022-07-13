@@ -1,24 +1,35 @@
-// ---------------------------------
+const header = document.querySelector('.header');
+const burgerBtn = header.querySelector('.navigation__button');
+const navigation = header.querySelector('.navigation');
+const headerLogo = header.querySelector('.header__logo');
 
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
+if (navigation.classList.contains('navigation--noscript')) {
+  navigation.classList.remove('navigation--noscript');
+}
 
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
+if (navigation.classList.contains('navigation--menu-open')) {
+  navigation.classList.remove('navigation--menu-open');
+}
 
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
+if (!navigation.classList.contains('navigation--menu-close')) {
+  navigation.classList.add('navigation--menu-close');
+}
 
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
+const togleMenuHandler = (evt) => {
+  evt.preventDefault();
+  if (burgerBtn.classList.contains('navigation__button--open')) {
+    burgerBtn.classList.remove('navigation__button--open');
+    burgerBtn.classList.add('navigation__button--close');
+    navigation.classList.remove('navigation--menu-close');
+    navigation.classList.add('navigation--menu-open');
+    headerLogo.classList.add('header__logo--menu-open');
+  } else {
+    burgerBtn.classList.add('navigation__button--open');
+    burgerBtn.classList.remove('navigation__button--close');
+    navigation.classList.remove('navigation--menu-open');
+    navigation.classList.add('navigation--menu-close');
+    headerLogo.classList.remove('header__logo--menu-open');
+  }
+};
 
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)
+burgerBtn.addEventListener('click', togleMenuHandler);

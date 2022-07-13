@@ -1,0 +1,24 @@
+.header {
+  box-sizing: border-box;
+  background: $color-tangaroa;
+}
+
+.header__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 34px;
+
+  @media #{$middle-vp} {
+    padding: 30px 45px 0;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 20px 15px;
+  }
+}
