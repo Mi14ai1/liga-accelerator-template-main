@@ -1,0 +1,19 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  padding-top: 110px;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  list-style: none;
+  padding: 0;
+
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+}
