@@ -1,0 +1,129 @@
+.advantage-card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+  min-height: 241px;
+  padding: 81px 30px 25px;
+  background: $color-alice-blue;
+  opacity: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  &--liner::before {
+    top: 30px;
+    left: 30px;
+    width: 27px;
+    height: 32px;
+    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#liner");
+  }
+
+  &--all-inclusive::before {
+    top: 35px;
+    left: 30px;
+    width: 38px;
+    height: 21px;
+    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#all-inclusive");
+  }
+
+  &--boat::before {
+    top: 38px;
+    left: 30px;
+    width: 42px;
+    height: 15px;
+    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#boat");
+  }
+
+  @media #{$middle-vp} {
+    min-height: 310px;
+    padding: 71px 10px 10px 20px;
+
+    &--liner::before {
+      top: 20px;
+      left: 20px;
+      width: 21px;
+      height: 36px;
+    }
+
+    &--all-inclusive::before {
+      top: 29px;
+      left: 20px;
+      width: 33px;
+      height: 19px;
+    }
+
+    &--boat::before {
+      top: 30px;
+      left: 20px;
+      width: 38px;
+      height: 17px;
+    }
+  }
+
+  @media #{$narrow-vp} {
+    min-height: 249px;
+    padding: 71px 20px 10px;
+
+    &--liner::before {
+      top: 20px;
+      left: 20px;
+      width: 21px;
+      height: 36px;
+    }
+
+    &--all-inclusive::before {
+      top: 29px;
+      left: 20px;
+      width: 33px;
+      height: 19px;
+    }
+
+    &--boat::before {
+      top: 30px;
+      left: 20px;
+      width: 38px;
+      height: 17px;
+    }
+  }
+}
+
+.advantage-card h3 {
+  font-family: $ff-montserrat;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: $color-tangaroa;
+  margin: 0;
+
+  @media #{$middle-vp} {
+    line-height: 25px;
+  }
+
+  @media #{$narrow-vp} {
+    line-height: 25px;
+    max-width: 200px;
+  }
+}
+
+.advantage-card p {
+  font-family: $ff-montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-tangaroa;
+  margin: 0;
+}
+
+.advantage-card--boat p {
+  @media #{$wide-vp} {
+    padding-right: 50px;
+  }
+}
