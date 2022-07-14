@@ -3,6 +3,18 @@
   flex-direction: column;
   gap: 49px;
   padding-top: 110px;
+  padding-bottom: 120px;
+
+  @media #{$middle-vp} {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @media #{$narrow-vp} {
+    gap: 30px;
+    padding-top: 57px;
+    padding-bottom: 65px;
+  }
 }
 
 .catalog__list {
@@ -16,4 +28,14 @@
   max-width: 1130px;
   width: 100%;
   margin: 0 auto;
+
+  @media #{$middle-vp} {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 648px;
+  }
+
+  @media #{$narrow-vp} {
+    grid-template-columns: 1fr;
+    max-width: 270px;
+  }
 }
