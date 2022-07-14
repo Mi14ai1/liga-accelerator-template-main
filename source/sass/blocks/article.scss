@@ -3,20 +3,20 @@
   justify-content: space-between;
   gap: 70px;
   align-items: flex-start;
-  padding: 120px 103px;
+  padding: 120px 103px 115px;
   max-width: 1160px;
   margin: 0 auto;
 
   @media #{$middle-vp} {
     gap: 30px;
-    padding: 100px 0;
+    padding: 100px 0 93px;
     margin: 0 45px;
   }
 
   @media #{$narrow-vp} {
     flex-direction: column;
     gap: 33px;
-    padding: 57px 0 0;
+    padding: 57px 0 60px;
     margin: 0 15px;
   }
 }
