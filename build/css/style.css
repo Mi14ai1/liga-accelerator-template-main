@@ -447,11 +447,11 @@ template {
   padding-top: 34px;
 }
 
-.heder-logo svg {
+.header-logo svg {
   fill: #f9fbfd;
 }
 
-.heder-logo--menu-open svg {
+.header-logo--menu-open svg {
   fill: none;
 }
 
@@ -1422,7 +1422,7 @@ template {
 } */
 
 @media (min-width: 768px) {
-  .heder-logo--menu-open svg {
+  .header-logo--menu-open svg {
     fill: #f9fbfd;
   }
 
@@ -1541,7 +1541,7 @@ template {
     padding: 20px 15px;
   }
 
-  .heder-logo svg {
+  .header-logo svg {
     width: 42px;
     height: 22px;
   }
@@ -1847,7 +1847,7 @@ template {
     padding: 30px 45px 0;
   }
 
-  .heder-logo svg {
+  .header-logo svg {
     width: 38px;
     height: 20px;
   }

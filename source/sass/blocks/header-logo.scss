@@ -1,4 +1,4 @@
-.heder-logo svg {
+.header-logo svg {
   fill: $logo-default-color;
 
   @media #{$middle-vp} {
@@ -12,7 +12,7 @@
   }
 }
 
-.heder-logo--menu-open svg {
+.header-logo--menu-open svg {
   fill: none;
 
   @media #{$not-narrow-vp} {
