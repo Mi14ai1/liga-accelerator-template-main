@@ -23,7 +23,7 @@
     left: 30px;
     width: 27px;
     height: 32px;
-    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#liner");
+    background: no-repeat center/ cover url("../img/advantages/advantages-sprite.svg#liner");
   }
 
   &--all-inclusive::before {
@@ -31,7 +31,7 @@
     left: 30px;
     width: 38px;
     height: 21px;
-    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#all-inclusive");
+    background: no-repeat center/ cover url("../img/advantages/advantages-sprite.svg#all-inclusive");
   }
 
   &--boat::before {
@@ -39,7 +39,7 @@
     left: 30px;
     width: 42px;
     height: 15px;
-    background: no-repeat center/ cover url("../../img/advantages/advantages-sprite.svg#boat");
+    background: no-repeat center/ cover url("../img/advantages/advantages-sprite.svg#boat");
   }
 
   @media #{$middle-vp} {

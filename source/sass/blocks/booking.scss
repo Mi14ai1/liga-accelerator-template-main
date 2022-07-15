@@ -1,0 +1,115 @@
+.booking {
+  box-sizing: border-box;
+  min-height: 555px;
+  padding-top: 50px;
+  background: no-repeat center/ cover url("../img/booking-bkg-l.png");
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-l@2x.png");
+  }
+
+  @media #{$middle-vp} {
+    min-height: 805px;
+    padding-top: 88px;
+    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m.png");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m@2x.png");
+    }
+  }
+
+  @media #{$narrow-vp} {
+    min-height: 760px;
+    padding-top: 59px;
+    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s.png");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s@2x.png");
+    }
+  }
+}
+
+.booking__wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+
+  @media #{$wide-vp} {
+    display: grid;
+    grid-template-columns: 1fr minmax(290px, 403px);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 8px;
+    column-gap: 40px;
+  }
+
+  @media #{$not-wide-vp} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media #{$narrow-vp} {
+    margin: 0 15px;
+  }
+}
+
+.booking h3,
+.booking p {
+  margin: 0;
+
+  @media #{$wide-vp} {
+    grid-column: 1/2;
+  }
+
+  @media #{$not-wide-vp} {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.booking h3 {
+  font-family: $ff-montserrat;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  color: $color-tangaroa;
+
+  align-self: flex-end;
+
+  @media #{$middle-vp} {
+    font-size: 34px;
+    line-height: 51px;
+    align-self: center;
+  }
+
+  @media #{$narrow-vp} {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking p {
+  font-family: $ff-montserrat;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: $color-tangaroa;
+  max-width: 400px;
+  margin: 0;
+
+  @media #{$not-wide-vp} {
+    align-self: center;
+  }
+
+  @media #{$middle-vp} {
+    margin: 5px 0 52px;
+  }
+
+  @media #{$narrow-vp} {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 14px 0 34px;
+  }
+}
