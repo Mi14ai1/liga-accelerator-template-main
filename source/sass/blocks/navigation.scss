@@ -39,6 +39,10 @@
     font-weight: 500;
     color: $color-tangaroa;
   }
+
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 .navigation__logo {

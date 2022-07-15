@@ -88,6 +88,14 @@
   background: $color-alice-blue;
   padding: 8px 10px;
   margin: 0;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 1px $hover-color;
+  }
 }
 
 .catalog-card__description {

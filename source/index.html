@@ -416,27 +416,29 @@
       </ul>
     </section>
     <section class="booking">
-      <h2>Бронирование</h2>
-      <div class="booking__description">
+      <h2 class="visually-hidden">Бронирование</h2>
+      <div class="booking__wrapper">
         <h3>Раннее бронирование</h3>
-        <p>Забронируйте тур за&nbsp;3&ndash;6&nbsp;месяцев<br />
-          до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
-      </div>
-      <div class="booking-card">
-        <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
-        <form action="#" method="post" class="booking-card__form">
-          <label class="booking-card__label booking-card__label--hidden" for="name">Имя</label>
-          <input class="booking-card__input" type="text" name="name" id="name" placeholder="Имя">
-          <label class="booking-card__label booking-card__label--hidden" for="phone">Телефон</label>
-          <input class="booking-card__input" type="tel" name="phone" id="phone" placeholder="Телефон">
-          <label class="booking-card__label booking-card__label--hidden" for="email">Email</label>
-          <input class="booking-card__input" type="text" name="email" id="email" placeholder="Email">
-          <label class="booking-card__label" for="convention">
-            <input type="checkbox" id="convention">
-            Я&nbsp;согласен на&nbsp;обработку моих персональных данных
-          </label>
-          <button class="booking-card__submit" type="submit">Оставить заявку</button>
-        </form>
+        <p>Забронируйте тур за&nbsp;3&ndash;6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%
+        </p>
+        <div class="booking-form">
+          <h4>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h4>
+          <form action="#" method="post">
+            <div class="booking-form__input-wrapper">
+              <label class="booking-form__label visually-hidden" for="name">Имя</label>
+              <input type="text" name="name" id="name" placeholder="Имя">
+              <label class="booking-form__label visually-hidden" for="phone">Телефон</label>
+              <input type="tel" name="phone" id="phone" placeholder="Телефон">
+              <label class="booking-form__label visually-hidden" for="email">Email</label>
+              <input type="text" name="email" id="email" placeholder="Email">
+              <label class="booking-form__label booking-form__label--confirm" for="confirm">
+                <input type="checkbox" id="confirm">
+                Я&nbsp;согласен на&nbsp;обработку моих персональных данных
+              </label>
+            </div>
+            <button class="booking-form__submit" type="submit">Оставить заявку</button>
+          </form>
+        </div>
       </div>
     </section>
     <section class="contacts">
