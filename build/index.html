@@ -13,7 +13,7 @@
 <body>
   <header class="header">
     <div class="header__wrapper header__grid">
-      <div class="heder-logo">
+      <div class="header-logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="38">
           <use href="img/logo.svg#logo"></use>
         </svg>
@@ -426,11 +426,12 @@
           <form action="#" method="post">
             <div class="booking-form__input-wrapper">
               <label class="booking-form__label visually-hidden" for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="Имя">
+              <input type="text" name="name" id="name" placeholder="Имя" required>
               <label class="booking-form__label visually-hidden" for="phone">Телефон</label>
-              <input type="tel" name="phone" id="phone" placeholder="Телефон">
+              <input type="tel" name="phone" id="phone" placeholder="Телефон"
+                title="Введите номер телефона без кода страны" pattern="[0-9]{10}" required maxlength="10">
               <label class="booking-form__label visually-hidden" for="email">Email</label>
-              <input type="text" name="email" id="email" placeholder="Email">
+              <input type="email" name="email" id="email" placeholder="Email" required>
               <label class="booking-form__label booking-form__label--confirm" for="confirm">
                 <input type="checkbox" id="confirm">
                 Я&nbsp;согласен на&nbsp;обработку моих персональных данных
