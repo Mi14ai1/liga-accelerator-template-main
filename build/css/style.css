@@ -624,7 +624,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 26px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1296,6 +1296,103 @@ template {
   color: #2363b7;
 }
 
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 120px 0;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.contacts__map {
+  max-width: 560px;
+  min-height: 306px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 489px;
+  padding-right: 11px;
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 21px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.contacts__item::before {
+  content: "";
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 18px;
+  height: 22px;
+  background: #011c40;
+}
+
+.contacts__item--adress::before {
+  -webkit-mask: url("../img/contacts/contacts-sprite.svg#point");
+  mask: url("../img/contacts/contacts-sprite.svg#point");
+}
+
+.contacts__item--phone::before {
+  -webkit-mask: url("../img/contacts/contacts-sprite.svg#phone");
+  mask: url("../img/contacts/contacts-sprite.svg#phone");
+}
+
+.contacts h3 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #011c40;
+  margin: 0;
+}
+
+.contacts p,
+.contacts a {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #011c40;
+  text-decoration: none;
+  margin: 0;
+}
+
 .market-block h2 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 28px;
@@ -1433,6 +1530,10 @@ template {
     -ms-grid-row-align: center;
     align-self: center;
   }
+
+  .contacts__container {
+    padding: 0;
+  }
 }
 
 @media (max-width: 767.5px) {
@@ -1495,10 +1596,15 @@ template {
     padding: 20px 15px 20px;
     max-width: 285px;
     background: #f9fbfd;
+    z-index: 1;
   }
 
   .footer__wrapper {
     margin: 0 15px;
+  }
+
+  .footer__grid {
+    padding: 31px 0 38px;
   }
 
   .footer__grid {
@@ -1509,7 +1615,7 @@ template {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    gap: 30px;
+    gap: 24px;
   }
 
   .footer__navigation {
@@ -1517,6 +1623,7 @@ template {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 18px;
   }
 
   .footer__navigation-list {
@@ -1527,16 +1634,20 @@ template {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer__social-list {
+    gap: 18px;
   }
 
   .footer-logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    width: 100%;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 44px;
   }
 
   .banner__wrapper {
@@ -1691,6 +1802,20 @@ template {
     text-align: center;
   }
 
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    gap: 40px;
+    padding: 58px 0 71px;
+    margin: 0 15px;
+  }
+
+  .contacts__container {
+    gap: 27px;
+  }
+
   .market-block h2 {
     font-size: 24px;
     line-height: 36px;
@@ -1739,6 +1864,10 @@ template {
 
   .footer__wrapper {
     margin: 0 45px;
+  }
+
+  .footer__grid {
+    padding: 48px 0 47px;
   }
 
   .footer__navigation {
@@ -1858,6 +1987,22 @@ template {
 
   .booking p {
     margin: 5px 0 52px;
+  }
+
+  .contacts {
+    gap: 30px;
+    padding: 100px 0;
+    margin: 0 45px;
+  }
+
+  .contacts__map {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 324px;
+    height: 335px;
   }
 
   .market-block h2 {

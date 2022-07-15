@@ -10,7 +10,7 @@
 .footer-logo {
   @media #{$narrow-vp} {
     display: flex;
-    align-items: flex-start;
-    width: 100%;
+    align-self: flex-start;
+    width: 44px;
   }
 }
