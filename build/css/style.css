@@ -514,6 +514,7 @@ template {
   -ms-grid-row-align: center;
   align-self: center;
   top: -2px;
+  padding: 3px;
 }
 
 .navigation__button--open {
@@ -537,6 +538,7 @@ template {
 .navigation__button--close {
   -webkit-box-shadow: none;
   box-shadow: none;
+  height: 24px;
 }
 
 .navigation__button--close::after {
@@ -738,7 +740,7 @@ template {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding: 120px 103px 115px;
+  padding: 120px 103px 117px;
 }
 
 .article h2 {
@@ -781,6 +783,23 @@ template {
   font-weight: 400;
   color: #011c40;
   margin: 0;
+}
+
+.article img {
+  width: 100%;
+  height: 100%;
+  max-width: 560px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.article__image {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 48%;
 }
 
 .advantages {
@@ -914,16 +933,28 @@ template {
 }
 
 .catalog__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 30px;
+  max-width: 1130px;
   list-style: none;
   padding: 0;
-  max-width: 1130px;
-  width: 100%;
   margin: 0 auto;
+}
+
+.catalog__item {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 260px;
 }
 
 .catalog-card {
@@ -940,7 +971,6 @@ template {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  max-width: 260px;
   width: 100%;
   min-height: 386px;
   padding: 22px 30px;
@@ -1566,6 +1596,18 @@ template {
     color: #011c40;
   }
 
+  .navigation__button:hover {
+    opacity: 0.3;
+  }
+
+  .navigation__button:active {
+    opacity: 0.9;
+  }
+
+  .navigation__button:focus-visible {
+    border: solid;
+  }
+
   .navigation--menu-close {
     position: relative;
   }
@@ -1686,9 +1728,8 @@ template {
     max-width: 260px;
   }
 
-  .article img {
-    width: 290px;
-    height: 186px;
+  .article__image {
+    width: 100%;
   }
 
   .advantages--wrapper {
@@ -1706,6 +1747,7 @@ template {
   }
 
   .advantage-card {
+    max-width: 100%;
     min-height: 249px;
     padding: 71px 20px 10px;
   }
@@ -1733,11 +1775,11 @@ template {
 
   .advantage-card h3 {
     line-height: 25px;
-    max-width: 200px;
+    padding-right: 50px;
   }
 
   .advantage-card p {
-    max-width: 248px;
+    padding-right: 2px;
   }
 
   .catalog {
@@ -1746,15 +1788,8 @@ template {
     padding-bottom: 65px;
   }
 
-  .catalog__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    max-width: 270px;
-  }
-
   .catalog-card {
     padding: 17px 25px;
-    max-width: 270px;
   }
 
   .booking {
@@ -1832,6 +1867,12 @@ template {
   }
 }
 
+@media (max-width: 737.5px) {
+  .catalog__item {
+    width: 100%;
+  }
+}
+
 @media (max-width: 419.5px) {
   .banner--background::before {
     top: -66px;
@@ -1843,6 +1884,15 @@ template {
 @media (max-width: 419.5px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 419.5px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 419.5px) and (min-resolution: 144dpi), (max-width: 419.5px) and (min-resolution: 1.5dppx) {
   .banner--background::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-s@2x.png");
+  }
+}
+
+@media (max-width: 338.5px) {
+  .catalog__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 25px;
   }
 }
 
@@ -1878,6 +1928,10 @@ template {
     gap: 25px;
   }
 
+  .footer__social-list {
+    gap: 22px;
+  }
+
   .footer-logo svg {
     width: 38px;
     height: 20px;
@@ -1906,11 +1960,6 @@ template {
     font-size: 26px;
     line-height: 36px;
     max-width: 260px;
-  }
-
-  .article img {
-    width: 324px;
-    height: 264px;
   }
 
   .advantages--wrapper {
@@ -1958,15 +2007,8 @@ template {
     padding-bottom: 100px;
   }
 
-  .catalog__list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 648px;
-  }
-
   .catalog-card {
     padding: 27px 35px;
-    max-width: 309px;
   }
 
   .catalog-card__description {
@@ -2035,6 +2077,22 @@ template {
 @media (max-width: 767.5px) and (min-width: 419.5px) {
   .banner__wrapper {
     min-height: 583px;
+  }
+}
+
+@media (min-width: 339px) and (max-width: 1365.5px) {
+  .catalog__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 45px;
+  }
+}
+
+@media (min-width: 738px) and (max-width: 1365.5px) {
+  .catalog__item {
+    max-width: 309px;
+    width: 100%;
   }
 }
 
