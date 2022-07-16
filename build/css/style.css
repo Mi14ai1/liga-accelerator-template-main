@@ -424,6 +424,15 @@ template {
   src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
+.page {
+  scroll-behavior: smooth;
+}
+
+.page__centerer {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
 .header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -571,11 +580,6 @@ template {
 
 .footer {
   background: #011c40;
-}
-
-.footer__wrapper {
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
 .footer__grid {
@@ -735,8 +739,6 @@ template {
   -ms-flex-align: start;
   align-items: flex-start;
   padding: 120px 103px 115px;
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
 .article h2 {
@@ -824,10 +826,8 @@ template {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1160px;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
   z-index: 1;
 }
 
@@ -1307,8 +1307,6 @@ template {
   -ms-flex-align: center;
   align-items: center;
   padding: 120px 0;
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
 .contacts__map {
@@ -1537,6 +1535,10 @@ template {
 }
 
 @media (max-width: 767.5px) {
+  .page__centerer {
+    margin: 0 15px;
+  }
+
   .header__grid {
     padding: 20px 15px;
   }
@@ -1597,10 +1599,6 @@ template {
     max-width: 285px;
     background: #f9fbfd;
     z-index: 1;
-  }
-
-  .footer__wrapper {
-    margin: 0 15px;
   }
 
   .footer__grid {
@@ -1676,7 +1674,6 @@ template {
     flex-direction: column;
     gap: 33px;
     padding: 57px 0 60px;
-    margin: 0 15px;
   }
 
   .article__description {
@@ -1706,7 +1703,6 @@ template {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 31px;
-    margin: 0 15px;
   }
 
   .advantage-card {
@@ -1738,6 +1734,10 @@ template {
   .advantage-card h3 {
     line-height: 25px;
     max-width: 200px;
+  }
+
+  .advantage-card p {
+    max-width: 248px;
   }
 
   .catalog {
@@ -1792,6 +1792,7 @@ template {
   .booking-form__label--confirm {
     line-height: 12px;
     gap: 8px;
+    max-width: 180px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1809,11 +1810,14 @@ template {
     flex-flow: column-reverse;
     gap: 40px;
     padding: 58px 0 71px;
-    margin: 0 15px;
   }
 
   .contacts__container {
     gap: 27px;
+  }
+
+  .contacts__item--adress::before {
+    padding-top: 10px;
   }
 
   .market-block h2 {
@@ -1843,6 +1847,10 @@ template {
 }
 
 @media (min-width: 768px) and (max-width: 1365.5px) {
+  .page__centerer {
+    margin: 0 45px;
+  }
+
   .header__grid {
     padding: 30px 45px 0;
   }
@@ -1860,10 +1868,6 @@ template {
   .navigation__link {
     font-size: 14px;
     line-height: 17px;
-  }
-
-  .footer__wrapper {
-    margin: 0 45px;
   }
 
   .footer__grid {
@@ -1891,7 +1895,6 @@ template {
   .article {
     gap: 30px;
     padding: 100px 0 93px;
-    margin: 0 45px;
   }
 
   .article__description {
@@ -1918,7 +1921,6 @@ template {
 
   .advantages__list {
     gap: 30px;
-    margin: 0 45px;
   }
 
   .advantage-card {
@@ -1992,7 +1994,6 @@ template {
   .contacts {
     gap: 30px;
     padding: 100px 0;
-    margin: 0 45px;
   }
 
   .contacts__map {

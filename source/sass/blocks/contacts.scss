@@ -3,20 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 120px 0;
-  max-width: 1160px;
-  margin: 0 auto;
 
   @media #{$middle-vp} {
     gap: 30px;
     padding: 100px 0;
-    margin: 0 45px;
   }
 
   @media #{$narrow-vp} {
     flex-flow: column-reverse;
     gap: 40px;
     padding: 58px 0 71px;
-    margin: 0 15px;
   }
 }
 
@@ -75,6 +71,10 @@
 
   &--adress::before {
     mask: url("../img/contacts/contacts-sprite.svg#point");
+
+    @media #{$narrow-vp} {
+      padding-top: 10px;
+    }
   }
 
   &--phone::before {
