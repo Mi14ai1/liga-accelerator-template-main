@@ -112,6 +112,7 @@
   @media #{$narrow-vp} {
     line-height: 12px;
     gap: 8px;
+    max-width: 180px;
     align-items: flex-start;
   }
 }

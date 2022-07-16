@@ -1,0 +1,16 @@
+.page {
+  scroll-behavior: smooth;
+}
+
+.page__centerer {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @media #{$middle-vp} {
+    margin: 0 45px;
+  }
+
+  @media #{$narrow-vp} {
+    margin: 0 15px;
+  }
+}

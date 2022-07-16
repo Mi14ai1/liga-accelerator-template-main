@@ -120,6 +120,10 @@
   font-weight: 400;
   color: $color-tangaroa;
   margin: 0;
+
+  @media #{$narrow-vp} {
+    max-width: 248px;
+  }
 }
 
 .advantage-card--boat p {

@@ -44,20 +44,16 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1160px;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
   z-index: 1;
 
   @media #{$middle-vp} {
     gap: 30px;
-    margin: 0 45px;
   }
 
   @media #{$narrow-vp} {
     flex-direction: column;
     gap: 31px;
-    margin: 0 15px;
   }
 }
