@@ -67,6 +67,8 @@
   align-self: center;
   top: -2px;
 
+  padding: 3px;
+
   &--open {
     box-shadow:
       0 -2px 0 0 $color-default-white inset,
@@ -86,6 +88,7 @@
 
   &--close {
     box-shadow: none;
+    height: 24px;
 
 
     &::after {
@@ -108,6 +111,20 @@
       width: 100%;
       height: 2px;
       background: $color-tangaroa;
+    }
+  }
+
+  @media #{$narrow-vp} {
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+
+    &:focus-visible {
+      border: solid;
     }
   }
 
