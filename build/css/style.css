@@ -493,6 +493,14 @@ template {
   color: #2363b7;
 }
 
+.navigation__link:active {
+  opacity: 0.8;
+}
+
+.navigation__link:focus-visible {
+  outline-color: #2363b7;
+}
+
 .navigation__logo {
   fill: #011c40;
 }
@@ -538,7 +546,8 @@ template {
 .navigation__button--close {
   -webkit-box-shadow: none;
   box-shadow: none;
-  height: 24px;
+  height: 16px;
+  width: 16px;
 }
 
 .navigation__button--close::after {
@@ -624,6 +633,18 @@ template {
   font-weight: 500;
   color: #f9fbfd;
   text-decoration: none;
+}
+
+.footer a:hover {
+  color: #2363b7;
+}
+
+.footer a:active {
+  opacity: 0.8;
+}
+
+.footer a:focus-visible {
+  outline-color: #2363b7;
 }
 
 .footer__social-list {
@@ -1056,6 +1077,13 @@ template {
 .catalog-card a:active {
   -webkit-box-shadow: inset 0 0 0 1px #2363b7;
   box-shadow: inset 0 0 0 1px #2363b7;
+  opacity: 0.8;
+}
+
+.catalog-card a:focus-visible {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 0 3px #2363b7;
+  box-shadow: inset 0 0 0 3px #2363b7;
 }
 
 .catalog-card__description {
@@ -1201,6 +1229,10 @@ template {
   box-shadow: 0 0 0 3px #2363b7;
 }
 
+.booking-form input:not(input[type="checkbox"]):focus-visible {
+  outline-color: #2363b7;
+}
+
 .booking-form input:not(input[type="checkbox"])::-webkit-input-placeholder {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
@@ -1280,6 +1312,10 @@ template {
   transform: rotate(-135deg);
 }
 
+.booking-form input[type="checkbox"]:focus-visible {
+  outline-color: #2363b7;
+}
+
 .booking-form__label {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 10px;
@@ -1324,6 +1360,15 @@ template {
 
 .booking-form__submit:hover {
   color: #2363b7;
+}
+
+.booking-form__submit:active {
+  opacity: 0.8;
+}
+
+.booking-form__submit:focus-visible {
+  -webkit-box-shadow: inset 0 0 0 3px #2363b7;
+  box-shadow: inset 0 0 0 3px #2363b7;
 }
 
 .contacts {
@@ -1580,9 +1625,12 @@ template {
 
   .navigation__list {
     -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-area: 2/1/2/2;
+    -ms-grid-column-span: 2;
+    grid-area: 2/1/3/3;
+    gap: 28px;
+    margin: 39px 0 0 9px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1601,7 +1649,7 @@ template {
   }
 
   .navigation__button:active {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .navigation__button:focus-visible {
@@ -1637,6 +1685,7 @@ template {
     grid-template-columns: 1fr 1fr;
     right: 0;
     top: 0;
+    width: 285px;
     padding: 20px 15px 20px;
     max-width: 285px;
     background: #f9fbfd;

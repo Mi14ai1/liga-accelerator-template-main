@@ -69,6 +69,18 @@
     font-size: 12px;
     line-height: 15px;
   }
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline-color: $hover-color;
+  }
 }
 
 .footer__social-list {
