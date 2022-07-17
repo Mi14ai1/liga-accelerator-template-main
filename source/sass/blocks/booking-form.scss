@@ -40,6 +40,10 @@
     box-shadow: 0 0 0 3px $hover-color;
   }
 
+  &:focus-visible {
+    outline-color: $hover-color;
+  }
+
   &::placeholder {
     font-family: $ff-montserrat;
     font-size: 14px;
@@ -87,6 +91,10 @@
       border-top: solid 1px $color-tangaroa;
       transform: rotate(-135deg);
     }
+  }
+
+  &:focus-visible {
+    outline-color: $hover-color;
   }
 
   @media #{$narrow-vp} {
@@ -147,5 +155,13 @@
 
   &:hover {
     color: $hover-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 3px $hover-color;
   }
 }
