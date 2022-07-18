@@ -704,7 +704,7 @@ template {
   margin: 0 auto;
 }
 
-.banner--background::before {
+.banner::before {
   content: "";
   position: absolute;
   display: block;
@@ -837,24 +837,12 @@ template {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  width: 48%;
 }
 
 .advantages {
   position: relative;
-  background: #e3ecf6;
-}
-
-.advantages::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.1;
-  background: no-repeat center/cover url("../img/advantages/advantages-bkg-l.png");
+  background: no-repeat center/cover url("../img/advantages/advantages-bkg-l.png") #e3ecf6;
+  background-blend-mode: lighten;
 }
 
 .advantages--wrapper {
@@ -976,9 +964,6 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   gap: 30px;
   max-width: 1130px;
   list-style: none;
@@ -1117,6 +1102,7 @@ template {
   gap: 13px;
   top: 0;
   left: 0;
+  min-height: 386px;
   height: 100%;
   width: 100%;
   padding: 29px 25px 35px;
@@ -1143,7 +1129,19 @@ template {
 
 .catalog-card:hover .catalog-card__description,
 .catalog-card__description:focus-within {
+  position: relative;
   z-index: 5;
+}
+
+.catalog-card:hover h3,
+.catalog-card:focus-within h3 {
+  position: absolute;
+  z-index: -1;
+}
+
+.catalog-card:focus-within,
+.catalog-card:hover {
+  padding: 0;
 }
 
 .booking {
@@ -1151,7 +1149,7 @@ template {
   box-sizing: border-box;
   min-height: 555px;
   padding-top: 50px;
-  background: no-repeat center/cover url("../img/booking-bkg-l.png");
+  background: #011c40 no-repeat center/cover url("../img/booking-bkg-l.png");
 }
 
 .booking__wrapper {
@@ -1388,6 +1386,11 @@ template {
   box-shadow: inset 0 0 0 3px #2363b7;
 }
 
+.booking-form__submit:disabled {
+  color: #d8d8d9;
+  opacity: initial;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1483,12 +1486,12 @@ template {
   margin: 0;
 }
 
-noscript.contacts__map img {
-  max-width: 560px;
-}
-
 .contacts__map--noscript {
   display: none;
+}
+
+.noscript-map img {
+  max-width: 560px;
 }
 
 .market-block h2 {
@@ -1534,13 +1537,17 @@ noscript.contacts__map img {
 }
 
 @media (min-width: 1366px) {
+  .banner::before {
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-l.png");
+  }
+
   .banner {
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .banner--background::before {
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-l.png");
+  .article__description {
+    max-width: 534px;
   }
 
   .advantage-card--boat p {
@@ -1569,12 +1576,12 @@ noscript.contacts__map img {
 }
 
 @media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 144dpi), (min-width: 1366px) and (min-resolution: 1.5dppx) {
-  .banner--background::before {
+  .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-l@2x.png");
   }
 }
 
-@media (max-width: 1365.5px) {
+@media (max-width: 1365px) {
   .footer__navigation-list {
     gap: 23px;
   }
@@ -1634,7 +1641,7 @@ noscript.contacts__map img {
   }
 }
 
-@media (max-width: 767.5px) {
+@media (max-width: 767px) {
   .page__centerer {
     margin: 0 15px;
   }
@@ -1763,6 +1770,11 @@ noscript.contacts__map img {
     -ms-flex-item-align: start;
     align-self: flex-start;
     width: 44px;
+  }
+
+  section.banner--noscript::before {
+    top: 0;
+    min-height: 432px;
   }
 
   .banner__wrapper {
@@ -1931,7 +1943,7 @@ noscript.contacts__map img {
     padding-top: 10px;
   }
 
-  noscript.contacts__map img {
+  .noscript-map img {
     max-width: 270px;
   }
 
@@ -1941,42 +1953,43 @@ noscript.contacts__map img {
   }
 }
 
-@media (max-width: 767.5px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767.5px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767.5px) and (min-resolution: 144dpi), (max-width: 767.5px) and (min-resolution: 1.5dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .booking {
     background: #011c40 center/cover no-repeat url("../img/booking-bkg-s@2x.png");
   }
 }
 
-@media (max-width: 737.5px) {
+@media (max-width: 737px) {
   .catalog__item {
+    max-width: 270px;
     width: 100%;
   }
 }
 
-@media (max-width: 419.5px) {
-  .banner--background::before {
+@media (max-width: 419px) {
+  .banner::before {
     top: -66px;
     min-height: 500px;
     background: #011c40 center/cover no-repeat url("../img/top-bkg-s.png");
   }
 }
 
-@media (max-width: 419.5px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 419.5px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 419.5px) and (min-resolution: 144dpi), (max-width: 419.5px) and (min-resolution: 1.5dppx) {
-  .banner--background::before {
+@media (max-width: 419px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 419px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 419px) and (min-resolution: 144dpi), (max-width: 419px) and (min-resolution: 1.5dppx) {
+  .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-s@2x.png");
   }
 }
 
-@media (max-width: 338.5px) {
+@media (max-width: 338px) {
   .catalog__list {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0 25px;
+    margin: 0 auto;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1365.5px) {
+@media (min-width: 768px) and (max-width: 1365px) {
   .page__centerer {
     margin: 0 45px;
   }
@@ -2128,7 +2141,7 @@ noscript.contacts__map img {
     height: 335px;
   }
 
-  noscript.contacts__map img {
+  .noscript-map img {
     max-width: 324px;
   }
 
@@ -2138,49 +2151,46 @@ noscript.contacts__map img {
   }
 }
 
-@media (max-width: 1365.5px) and (min-width: 420px) {
-  .banner--background::before {
+@media (max-width: 1365px) and (min-width: 420px) {
+  .banner::before {
     top: -54px;
     min-height: 638px;
     background: #011c40 center/cover no-repeat url("../img/top-bkg-m.png");
   }
 }
 
-@media (max-width: 1365.5px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365.5px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365.5px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1365.5px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
-  .banner--background::before {
+@media (max-width: 1365px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
+  .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-m@2x.png");
   }
 }
 
-@media (max-width: 767.5px) and (min-width: 399.5px) {
-  .banner--background::before {
+@media (max-width: 767px) and (min-width: 399px) {
+  .banner::before {
     top: -66px;
   }
 }
 
-@media (max-width: 767.5px) and (min-width: 419.5px) {
+@media (max-width: 767px) and (min-width: 419px) {
   .banner__wrapper {
     min-height: 583px;
   }
 }
 
-@media (min-width: 339px) and (max-width: 1365.5px) {
+@media (min-width: 339px) and (max-width: 1365px) {
   .catalog__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     margin: 0 45px;
   }
 }
 
-@media (min-width: 738px) and (max-width: 1365.5px) {
+@media (min-width: 738px) and (max-width: 1365px) {
   .catalog__item {
     max-width: 309px;
     width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1365.5px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1365.5px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (max-width: 1365.5px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1365.5px) and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 1.5dppx) {
   .booking {
     background: #011c40 center/cover no-repeat url("../img/booking-bkg-m@2x.png");
   }

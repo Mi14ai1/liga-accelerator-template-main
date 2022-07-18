@@ -20,7 +20,6 @@
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
   max-width: 1130px;
   list-style: none;
@@ -28,14 +27,13 @@
 
   margin: 0 auto;
 
-  @media (min-width: 339px) and (max-width: 1365.5px) {
-    justify-content: center;
+  @media (min-width: 339px) and (max-width: 1365px) {
     margin: 0 45px;
   }
 
-  @media (max-width: 338.5px) {
+  @media (max-width: 338px) {
     justify-content: center;
-    margin: 0 25px;
+    margin: 0 auto;
   }
 }
 
@@ -44,12 +42,13 @@
   flex-shrink: 1;
   width: 260px;
 
-  @media (min-width: 738px) and (max-width: 1365.5px) {
+  @media (min-width: 738px) and (max-width: 1365px) {
     max-width: 309px;
     width: 100%;
   }
 
-  @media (max-width: 737.5px) {
+  @media (max-width: 737px) {
+    max-width: 270px;
     width: 100%;
   }
 }

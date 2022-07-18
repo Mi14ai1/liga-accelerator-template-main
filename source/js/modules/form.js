@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 const submitButton = form.querySelector('button');
 const confirmCheckbox = form.querySelector('input[type="checkbox"]');
 
-export const disabledButton = () => {
+export const disableButton = () => {
   submitButton.disabled = true;
   confirmCheckbox.addEventListener('change', () => {
     if (submitButton.disabled) {

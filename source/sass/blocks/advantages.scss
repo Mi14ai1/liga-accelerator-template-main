@@ -1,18 +1,7 @@
 .advantages {
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.1;
-    background: no-repeat center/ cover url("../img/advantages/advantages-bkg-l.png");
-  }
-  background: #e3ecf6;
+  background: no-repeat center/ cover url("../img/advantages/advantages-bkg-l.png") #e3ecf6;
+  background-blend-mode: lighten;
 }
 
 .advantages--wrapper {

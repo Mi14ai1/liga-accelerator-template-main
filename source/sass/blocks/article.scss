@@ -33,6 +33,10 @@
   gap: 25px;
   padding-top: 56px;
 
+  @media #{$wide-vp} {
+    max-width: 534px;
+  }
+
   @media #{$not-wide-vp} {
     padding: 0;
   }
@@ -87,7 +91,6 @@
 .article__image {
   flex-shrink: 0;
   flex-grow: 1;
-  width: 48%;
 
   @media #{$narrow-vp} {
     width: 100%;
