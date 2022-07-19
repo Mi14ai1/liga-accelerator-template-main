@@ -604,10 +604,6 @@ template {
   left: 0;
 }
 
-.navigation--menu-open {
-  overflow: scroll;
-}
-
 .navigation--menu-open--noscript {
   position: relative;
 }
@@ -1171,7 +1167,9 @@ template {
 
 .catalog-card:hover .catalog-card__description,
 .catalog-card__description:focus-within {
-  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   z-index: 5;
 }
 

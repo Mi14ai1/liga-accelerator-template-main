@@ -1,11 +1,10 @@
+const MOBILEVIEWPORT = 768;
+
 const body = document.querySelector('.body');
 const header = body.querySelector('.header');
 const burger = header.querySelector('.navigation__button');
 const navigation = header.querySelector('.navigation');
 const headerLogo = header.querySelector('.header-logo');
-
-
-const MOBILEVIEWPORT = 768;
 
 if (navigation.classList.contains('navigation--noscript')) {
   navigation.classList.remove('navigation--noscript');
