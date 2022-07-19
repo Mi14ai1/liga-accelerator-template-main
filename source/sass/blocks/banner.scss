@@ -2,12 +2,7 @@
   position: relative;
   margin: 0 auto;
 
-  @media #{$wide-vp} {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  }
-}
 
-.banner--background {
   &::before {
     content: "";
     position: absolute;
@@ -29,7 +24,7 @@
     }
   }
 
-  @media (max-width: 1365.5px) and (min-width: 420px) {
+  @media (max-width: 1365px) and (min-width: 420px) {
     &::before {
       top: -54px;
       min-height: 638px;
@@ -42,13 +37,13 @@
     }
   }
 
-  @media (max-width: 767.5px) and (min-width: 399.5px) {
+  @media (max-width: 767px) and (min-width: 399px) {
     &::before {
       top: -66px;
     }
   }
 
-  @media (max-width: 419.5px) {
+  @media (max-width: 419px) {
     &::before {
       top: -66px;
       min-height: 500px;
@@ -59,6 +54,18 @@
         background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-s@2x.png");
       }
     }
+  }
+
+  @media #{$wide-vp} {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+section.banner--noscript::before {
+  @media #{$narrow-vp} {
+    top: 0;
+    min-height: 432px;
   }
 }
 
@@ -81,7 +88,7 @@
     box-shadow: none;
   }
 
-  @media (max-width: 767.5px) and (min-width: 419.5px) {
+  @media (max-width: 767px) and (min-width: 419px) {
     min-height: 583px;
   }
 

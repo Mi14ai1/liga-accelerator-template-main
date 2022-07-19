@@ -1,4 +1,6 @@
 .footer {
+  flex-shrink: 1;
+  flex-grow: 0;
   background: $color-tangaroa;
 }
 
@@ -6,14 +8,14 @@
 .footer__grid {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 0 45px;
 
   @media #{$middle-vp} {
-    padding: 48px 0 47px;
+    padding: 48px 0 44px;
   }
 
   @media #{$narrow-vp} {
-    padding: 31px 0 38px;
+    padding: 31px 0 39px;
   }
 
   @media #{$narrow-vp} {
@@ -42,12 +44,16 @@
   display: flex;
   align-items: center;
   gap: 33px;
-  padding: 0;
+  padding: 0 0 1px;
   margin: 0;
   list-style: none;
 
   @media #{$not-wide-vp} {
     gap: 23px;
+  }
+
+  @media #{$middle-vp} {
+    padding-bottom: 6px;
   }
 
   @media #{$narrow-vp} {
@@ -80,22 +86,5 @@
 
   &:focus-visible {
     outline-color: $hover-color;
-  }
-}
-
-.footer__social-list {
-  display: flex;
-  gap: 26px;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  @media #{$middle-vp} {
-    gap: 22px;
-  }
-
-  @media #{$narrow-vp} {
-    gap: 18px;
   }
 }

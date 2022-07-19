@@ -79,6 +79,10 @@
 
   &--phone::before {
     mask: url("../img/contacts/contacts-sprite.svg#phone");
+
+    @media #{$middle-vp} {
+      height: 16px;
+    }
   }
 }
 
@@ -100,18 +104,6 @@
   color: $color-tangaroa;
   text-decoration: none;
   margin: 0;
-}
-
-noscript.contacts__map img {
-  max-width: 560px;
-
-  @media #{$middle-vp} {
-    max-width: 324px;
-  }
-
-  @media #{$narrow-vp} {
-    max-width: 270px;
-  }
 }
 
 .contacts__map--noscript {

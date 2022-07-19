@@ -59,11 +59,11 @@ $vp-1280: 1280px;
 $vp-1440: 1440px;
 $vp-1920: 1920px;
 
-$narrow-vp: "(max-width: 767.5px)";
+$narrow-vp: "(max-width: 767px)";
 $not-narrow-vp: "(min-width: 768px)";
-$middle-vp: "(min-width: 768px) and (max-width: 1365.5px)";
+$middle-vp: "(min-width: 768px) and (max-width: 1365px)";
 $wide-vp: "(min-width: 1366px)";
-$not-wide-vp: "(max-width: 1365.5px)";
+$not-wide-vp: "(max-width: 1365px)";
 
 // Retina
 // ---------------------------------

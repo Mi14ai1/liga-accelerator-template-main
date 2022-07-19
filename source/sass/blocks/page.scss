@@ -8,9 +8,17 @@
 
   @media #{$middle-vp} {
     margin: 0 45px;
+
+    &--header {
+      margin: 0;
+    }
   }
 
   @media #{$narrow-vp} {
     margin: 0 15px;
+
+    &--header {
+      margin: 0;
+    }
   }
 }

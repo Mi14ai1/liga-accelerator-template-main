@@ -1,12 +1,15 @@
-import {disabledButton} from './modules/form';
-import {toggleMenu} from './modules/menu.js';
+import {disableButton} from './modules/form';
+import {toggleMenu, resizeHandler} from './modules/menu.js';
 
-const nosscriptMap = document.querySelector('noscript');
+const noScriptMap = document.querySelector('noscript');
 const interactiveMap = document.querySelector('iframe.contacts__map');
+const bannerNoscript = document.querySelector('.banner--noscript');
 
-nosscriptMap.classList.add('contacts__map--noscript');
+bannerNoscript.classList.remove('banner--noscript');
+noScriptMap.classList.add('contacts__map--noscript');
 interactiveMap.classList.remove('contacts__map--noscript');
-
+window.addEventListener('resize', resizeHandler);
 
 toggleMenu();
-disabledButton();
+
+disableButton();

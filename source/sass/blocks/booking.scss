@@ -2,11 +2,14 @@
   box-sizing: border-box;
   min-height: 555px;
   padding-top: 50px;
-  background: no-repeat center/ cover url("../img/booking-bkg-l.png");
 
-  @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
-    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-l@2x.png");
+  @media #{$wide-vp} {
+    background: $color-tangaroa no-repeat center/ cover url("../img/booking-bkg-l.png");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-l@2x.png");
+    }
   }
 
   @media #{$middle-vp} {
