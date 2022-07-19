@@ -51,7 +51,7 @@
   z-index: 2;
 }
 
-.catalog-card h5 {
+.catalog-card dd {
   font-family: $ff-montserrat;
   font-size: 14px;
   line-height: 20px;
@@ -60,7 +60,7 @@
   margin: 0;
 }
 
-.catalog-card p {
+.catalog-card dt {
   font-family: $ff-montserrat;
   font-size: 14px;
   line-height: 20px;
@@ -115,6 +115,8 @@
   padding: 29px 25px 35px;
   background: $color-tangaroa;
   z-index: -1;
+  opacity: 0;
+  transform: scale(0);
 
   @media #{$middle-vp} {
     padding: 30px 35px 35px;
@@ -135,6 +137,8 @@
 .catalog-card__description:focus-within {
   height: min-content;
   z-index: 5;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .catalog-card:hover h3,
