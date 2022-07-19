@@ -133,7 +133,7 @@
 
 .catalog-card:hover .catalog-card__description,
 .catalog-card__description:focus-within {
-  position: relative;
+  height: min-content;
   z-index: 5;
 }
 
