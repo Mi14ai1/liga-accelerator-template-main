@@ -604,6 +604,10 @@ template {
   left: 0;
 }
 
+.navigation--menu-open {
+  overflow: scroll;
+}
+
 .navigation--menu-open--noscript {
   position: relative;
 }

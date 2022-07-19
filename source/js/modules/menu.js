@@ -28,6 +28,8 @@ const prevent = (ev) => ev.preventDefault();
 const resizeHandler = () => {
   if (document.documentElement.clientWidth > MOBILEVIEWPORT) {
     document.removeEventListener('wheel', prevent);
+    document.removeEventListener('wheel', prevent, {passive: false});
+    document.removeEventListener('touchmove', prevent, {passive: false});
   }
 };
 
@@ -39,6 +41,7 @@ const hideMenu = () => {
   navigation.classList.add('navigation--menu-close');
   headerLogo.classList.remove('header-logo--menu-open');
   document.removeEventListener('wheel', prevent);
+  document.removeEventListener('touchmove', prevent, {passive: false});
 };
 
 const showMenu = () => {
@@ -49,7 +52,7 @@ const showMenu = () => {
   navigation.classList.add('navigation--menu-open');
   headerLogo.classList.add('header-logo--menu-open');
   document.addEventListener('wheel', prevent, {passive: false});
-
+  document.addEventListener('touchmove', prevent, {passive: false});
 };
 
 const menuToggler = () => {
