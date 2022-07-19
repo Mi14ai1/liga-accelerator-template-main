@@ -79,6 +79,10 @@
 
   &--phone::before {
     mask: url("../img/contacts/contacts-sprite.svg#phone");
+
+    @media #{$middle-vp} {
+      height: 16px;
+    }
   }
 }
 

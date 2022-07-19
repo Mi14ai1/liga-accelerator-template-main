@@ -1,11 +1,18 @@
-const header = document.querySelector('.header');
+const body = document.querySelector('.body');
+const header = body.querySelector('.header');
 const burger = header.querySelector('.navigation__button');
 const navigation = header.querySelector('.navigation');
 const headerLogo = header.querySelector('.header-logo');
-const body = document.querySelector('.body');
+
+
+const MOBILEVIEWPORT = 768;
 
 if (navigation.classList.contains('navigation--noscript')) {
   navigation.classList.remove('navigation--noscript');
+}
+
+if (header.classList.contains('header--noscript')) {
+  header.classList.remove('header--noscript');
 }
 
 if (navigation.classList.contains('navigation--menu-open')) {
@@ -16,6 +23,14 @@ if (!navigation.classList.contains('navigation--menu-close')) {
   navigation.classList.add('navigation--menu-close');
 }
 
+const prevent = (ev) => ev.preventDefault();
+
+const resizeHandler = () => {
+  if (document.documentElement.clientWidth > MOBILEVIEWPORT) {
+    document.removeEventListener('wheel', prevent);
+  }
+};
+
 const hideMenu = () => {
   body.classList.remove('body--menu-open');
   burger.classList.add('navigation__button--open');
@@ -23,6 +38,7 @@ const hideMenu = () => {
   navigation.classList.remove('navigation--menu-open');
   navigation.classList.add('navigation--menu-close');
   headerLogo.classList.remove('header-logo--menu-open');
+  document.removeEventListener('wheel', prevent);
 };
 
 const showMenu = () => {
@@ -32,6 +48,8 @@ const showMenu = () => {
   navigation.classList.remove('navigation--menu-close');
   navigation.classList.add('navigation--menu-open');
   headerLogo.classList.add('header-logo--menu-open');
+  document.addEventListener('wheel', prevent, {passive: false});
+
 };
 
 const menuToggler = () => {
@@ -52,5 +70,6 @@ const toggleMenu = () => {
 };
 
 export {
-  toggleMenu
+  toggleMenu,
+  resizeHandler
 };

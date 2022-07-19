@@ -32,8 +32,13 @@
 
 .booking-form input:not(input[type="checkbox"]) {
   box-sizing: border-box;
-  padding: 5px 17px;
+  font-family: $ff-montserrat;
+  font-size: 21px;
+  font-weight: 400;
+  color: $color-tangaroa;
+  line-height: 14px;
   min-height: 43px;
+  padding: 5px 17px;
   border: none;
 
   &:hover {

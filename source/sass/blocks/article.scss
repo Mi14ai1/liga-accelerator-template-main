@@ -3,7 +3,7 @@
   justify-content: space-between;
   gap: 70px;
   align-items: flex-start;
-  padding: 120px 103px 117px;
+  padding: 120px 103px 115px;
 
   @media #{$middle-vp} {
     gap: 30px;
@@ -86,11 +86,19 @@
   height: 100%;
   max-width: 560px;
   object-fit: contain;
+
+  @media #{$narrow-vp} {
+    max-width: 100%;
+  }
 }
 
 .article__image {
   flex-shrink: 0;
   flex-grow: 1;
+
+  @media (min-width: 700px) and (max-width: 1365px) {
+    width: 48%;
+  }
 
   @media #{$narrow-vp} {
     width: 100%;

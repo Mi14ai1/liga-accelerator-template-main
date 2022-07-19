@@ -1,10 +1,29 @@
 .header {
   box-sizing: border-box;
+
+  @media #{$wide-vp} {
+    height: 76px;
+  }
+
+  @media #{$middle-vp} {
+    height: 54px;
+  }
+
+  @media #{$narrow-vp} {
+    height: 66px;
+
+    &--noscript {
+      height: 100%;
+    }
+  }
 }
 
-.header__wrapper {
-  max-width: 1160px;
-  margin: 0 auto;
+.header--noscript .header__hide {
+  display: none;
+}
+
+.header--noscript .header__grid {
+  justify-content: center;
 }
 
 .header__grid {
