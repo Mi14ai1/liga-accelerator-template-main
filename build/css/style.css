@@ -1073,7 +1073,7 @@ template {
   z-index: 2;
 }
 
-.catalog-card h5 {
+.catalog-card dd {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -1082,7 +1082,7 @@ template {
   margin: 0;
 }
 
-.catalog-card p {
+.catalog-card dt {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -1146,6 +1146,10 @@ template {
   padding: 29px 25px 35px;
   background: #011c40;
   z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .catalog-card__list {
@@ -1171,6 +1175,10 @@ template {
   height: -moz-min-content;
   height: min-content;
   z-index: 5;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .catalog-card:hover h3,
