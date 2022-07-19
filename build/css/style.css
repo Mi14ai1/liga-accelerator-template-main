@@ -1137,7 +1137,7 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 13px;
+  gap: 9px;
   top: 0;
   left: 0;
   min-height: 386px;
@@ -1160,7 +1160,6 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 12px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
