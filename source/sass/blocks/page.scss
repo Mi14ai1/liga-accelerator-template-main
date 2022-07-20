@@ -9,6 +9,15 @@
   @media #{$middle-vp} {
     margin: 0 45px;
 
+    &--footer,
+    &--advantages,
+    &--contacts,
+    &--article {
+      margin: 0 auto;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
     &--header {
       margin: 0;
     }

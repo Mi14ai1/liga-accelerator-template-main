@@ -48,6 +48,14 @@
       width: 16px;
     }
   }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .social svg {

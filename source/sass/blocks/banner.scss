@@ -15,11 +15,11 @@
 
   @media #{$wide-vp} {
     &::before {
-      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-l.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-l.jpg");
 
       @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-l@2x.png");
+        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-l@2x.jpg");
       }
     }
   }
@@ -28,11 +28,11 @@
     &::before {
       top: -54px;
       min-height: 638px;
-      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-m.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-m.jpg");
 
       @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-m@2x.png");
+        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-m@2x.jpg");
       }
     }
   }
@@ -47,11 +47,11 @@
     &::before {
       top: -66px;
       min-height: 500px;
-      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-s.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-s.jpg");
 
       @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
-        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-s@2x.png");
+        background: $color-tangaroa center/ cover no-repeat url("../img/top-bkg-s@2x.jpg");
       }
     }
   }

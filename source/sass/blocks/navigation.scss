@@ -85,7 +85,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 3px;
+      top: 4px;
       left: 3px;
       width: calc(100% - 6px);
       height: calc(100% - 6px);
@@ -99,7 +99,6 @@
       position: absolute;
       top: 50%;
       left: 3px;
-      transform: translateY(-50%);
       height: 2px;
       width: calc(100% - 6px);
       background: $color-default-white;
@@ -198,6 +197,12 @@
     padding: 20px 15px 20px;
     background: $color-alice-blue;
     z-index: 1;
+
+    .navigation__list {
+      width: 245px;
+      justify-self: flex-end;
+      overflow-y: scroll;
+    }
   }
 }
 

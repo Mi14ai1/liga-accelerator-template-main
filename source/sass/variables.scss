@@ -16,7 +16,6 @@ $mount-color: rgba(0, 43, 102, 0.5);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-tangaroa: #011c40;
-$color-torch-red: #ff1553;
 $color-alice-blue: #f9fbfd;
 $color-quartz: #d8d8d9;
 
@@ -37,27 +36,6 @@ $ff-montserrat: "Montserrat", "Arial", sans-serif;
 
 $ff-placeholder: "Montserrat", "Arial", sans-serif;
 
-// Animation
-// ---------------------------------
-
-$tf-default: ease;
-$trans-default: 0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600: 0.6s $tf-default;
-
-// Viewports
-// ---------------------------------
-
-$vp-320: 320px;
-$vp-375: 375px;
-$vp-768: 768px;
-$vp-1024: 1024px;
-$vp-1280: 1280px;
-$vp-1440: 1440px;
-$vp-1920: 1920px;
 
 $narrow-vp: "(max-width: 767px)";
 $not-narrow-vp: "(min-width: 768px)";

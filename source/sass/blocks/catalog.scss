@@ -27,13 +27,19 @@
 
   margin: 0 auto;
 
-  @media (min-width: 339px) and (max-width: 1365px) {
-    margin: 0 60px;
+  @media (min-width: 1107px) and (max-width: 1365px) {
+    max-width: 987px;
+    padding: 0 60px;
   }
 
-  @media (max-width: 338px) {
+  @media (min-width: 768px) and (max-width: 1106px) {
+    max-width: 648px;
+    padding: 0 60px;
+  }
+
+  @media (max-width: 767px) {
     justify-content: center;
-    margin: 0 auto;
+    padding: 0 15px;
   }
 }
 
@@ -42,12 +48,12 @@
   flex-shrink: 1;
   width: 260px;
 
-  @media (min-width: 738px) and (max-width: 1365px) {
+  @media (min-width: 768px) and (max-width: 1365px) {
     max-width: 309px;
     width: 100%;
   }
 
-  @media (max-width: 737px) {
+  @media (max-width: 767px) {
     max-width: 270px;
     width: 100%;
   }

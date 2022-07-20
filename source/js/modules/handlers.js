@@ -13,8 +13,6 @@ const hideMenu = () => {
   navigation.classList.remove('navigation--menu-open');
   navigation.classList.add('navigation--menu-close');
   headerLogo.classList.remove('header-logo--menu-open');
-  document.removeEventListener('wheel', prevent);
-  document.removeEventListener('touchmove', prevent, {passive: false});
   document.removeEventListener('keydown', keyDownCloseHandler);
   document.removeEventListener('click', clickOuthandler);
   navigation.removeEventListener('click', onClickHideMenuHandler);
