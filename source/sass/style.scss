@@ -13,7 +13,6 @@
 
 // Blocks
 // ---------------------------------
-@import "blocks/page";
 @import "blocks/body";
 @import "blocks/header";
 @import "blocks/header-logo";
@@ -34,7 +33,8 @@
 @import "blocks/noscript-map";
 @import "blocks/market-block";
 @import "blocks/visually-hidden";
-@import "blocks/wtrapper";
+@import "blocks/page";
+@import "blocks/wrapper";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

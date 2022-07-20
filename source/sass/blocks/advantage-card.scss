@@ -70,8 +70,12 @@
 
   @media #{$narrow-vp} {
     max-width: 100%;
-    min-height: 249px;
+    min-height: 250px;
     padding: 71px 20px 10px;
+
+    &--liner {
+      min-height: 249px;
+    }
 
     &--liner::before {
       top: 20px;

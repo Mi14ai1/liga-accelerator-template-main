@@ -424,13 +424,8 @@ template {
   src: url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
 }
 
-.page {
-  scroll-behavior: smooth;
-}
-
-.page__centerer {
-  max-width: 1160px;
-  margin: 0 auto;
+.body--menu-open {
+  overflow: hidden;
 }
 
 .header {
@@ -539,7 +534,7 @@ template {
 .navigation__button--open::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 3px;
   width: calc(100% - 6px);
   height: calc(100% - 6px);
@@ -552,9 +547,6 @@ template {
   position: absolute;
   top: 50%;
   left: 3px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   height: 2px;
   width: calc(100% - 6px);
   background: #ffffff;
@@ -715,6 +707,14 @@ template {
 
 .social .social__link--instagram {
   width: 14px;
+}
+
+.social .social__link:hover {
+  opacity: 0.3;
+}
+
+.social .social__link:active {
+  opacity: 0.8;
 }
 
 .main {
@@ -1056,6 +1056,8 @@ template {
   width: 100%;
   height: 100%;
   z-index: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .catalog-card h3,
@@ -1105,7 +1107,7 @@ template {
   text-align: center;
   min-height: 40px;
   background: #f9fbfd;
-  padding: 8px 10px;
+  padding: 10px 10px 8px;
   margin: 0;
 }
 
@@ -1136,7 +1138,7 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 9px;
+  gap: 13px;
   top: 0;
   left: 0;
   min-height: 386px;
@@ -1165,13 +1167,13 @@ template {
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow-y: scroll;
+  gap: 12px;
 }
 
 .catalog-card:hover .catalog-card__description,
 .catalog-card__description:focus-within {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  height: 100%;
   z-index: 5;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -1285,7 +1287,7 @@ template {
   color: #011c40;
   line-height: 14px;
   min-height: 43px;
-  padding: 5px 17px;
+  padding: 5px 17px 9px;
   border: none;
 }
 
@@ -1342,6 +1344,7 @@ template {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
+  cursor: pointer;
 }
 
 .booking-form input[type="checkbox"]::before {
@@ -1355,8 +1358,8 @@ template {
 }
 
 .booking-form input[type="checkbox"]:hover::before {
-  -webkit-box-shadow: inset 0 0 0 1px #2363b7;
-  box-shadow: inset 0 0 0 1px #2363b7;
+  -webkit-box-shadow: 0 0 0 3px #2363b7;
+  box-shadow: 0 0 0 3px #2363b7;
 }
 
 .booking-form input[type="checkbox"]:hover::after {
@@ -1397,6 +1400,7 @@ template {
   -ms-flex-align: center;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .booking-form h4 {
@@ -1417,10 +1421,12 @@ template {
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
+  color: #011c40;
   min-height: 43px;
   border: none;
   outline: none;
   background: #f9fbfd;
+  cursor: pointer;
 }
 
 .booking-form__submit:hover {
@@ -1483,7 +1489,7 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 21px;
+  gap: 14px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1534,6 +1540,7 @@ template {
   color: #011c40;
   text-decoration: none;
   margin: 0;
+  padding: 0 0 7px;
 }
 
 .contacts__map--noscript {
@@ -1563,6 +1570,15 @@ template {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.page {
+  scroll-behavior: smooth;
+}
+
+.page__centerer {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -1598,6 +1614,12 @@ template {
   .navigation__button {
     display: none;
   }
+
+  .contacts__container {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
 }
 
 @media (min-width: 1366px) {
@@ -1618,7 +1640,7 @@ template {
   }
 
   .banner::before {
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-l.png");
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-l.jpg");
   }
 
   .banner {
@@ -1631,7 +1653,7 @@ template {
   }
 
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-l.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-l.jpg") #e3ecf6;
   }
 
   .advantage-card--boat p {
@@ -1639,7 +1661,7 @@ template {
   }
 
   .booking {
-    background: #011c40 no-repeat center/cover url("../img/booking-bkg-l.png");
+    background: #011c40 no-repeat center/cover url("../img/booking-bkg-l.jpg");
   }
 
   .booking__wrapper {
@@ -1665,15 +1687,15 @@ template {
 
 @media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 144dpi), (min-width: 1366px) and (min-resolution: 1.5dppx) {
   .banner::before {
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-l@2x.png");
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-l@2x.jpg");
   }
 
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-l@2x.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-l@2x.jpg") #e3ecf6;
   }
 
   .booking {
-    background: #011c40 center/cover no-repeat url("../img/booking-bkg-l@2x.png");
+    background: #011c40 center/cover no-repeat url("../img/booking-bkg-l@2x.jpg");
   }
 }
 
@@ -1739,19 +1761,16 @@ template {
   }
 
   .contacts__container {
+    gap: 27px;
     padding: 0;
+  }
+
+  .contacts__list {
+    gap: 15px;
   }
 }
 
 @media (max-width: 767px) {
-  .page__centerer {
-    margin: 0 15px;
-  }
-
-  .page__centerer--header {
-    margin: 0;
-  }
-
   .body--menu-open::before {
     content: "";
     position: absolute;
@@ -1850,6 +1869,12 @@ template {
     padding: 20px 15px 20px;
     background: #f9fbfd;
     z-index: 1;
+  }
+
+  .navigation--menu-open .navigation__list {
+    width: 245px;
+    justify-self: flex-end;
+    overflow-y: scroll;
   }
 
   .footer__grid {
@@ -1951,7 +1976,7 @@ template {
   }
 
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-s.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-s.jpg") #e3ecf6;
   }
 
   .advantages--wrapper {
@@ -1965,13 +1990,17 @@ template {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 31px;
+    gap: 30px;
   }
 
   .advantage-card {
     max-width: 100%;
-    min-height: 249px;
+    min-height: 250px;
     padding: 71px 20px 10px;
+  }
+
+  .advantage-card--liner {
+    min-height: 249px;
   }
 
   .advantage-card--liner::before {
@@ -2010,6 +2039,18 @@ template {
     padding-bottom: 65px;
   }
 
+  .catalog__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .catalog__item {
+    max-width: 270px;
+    width: 100%;
+  }
+
   .catalog-card {
     padding: 17px 25px;
   }
@@ -2017,7 +2058,7 @@ template {
   .booking {
     min-height: 760px;
     padding-top: 59px;
-    background: #011c40 center/cover no-repeat url("../img/booking-bkg-s.png");
+    background: #011c40 center/cover no-repeat url("../img/booking-bkg-s.jpg");
   }
 
   .booking__wrapper {
@@ -2067,11 +2108,7 @@ template {
     -ms-flex-flow: column-reverse;
     flex-flow: column-reverse;
     gap: 40px;
-    padding: 58px 0 71px;
-  }
-
-  .contacts__container {
-    gap: 27px;
+    padding: 58px 0 63px;
   }
 
   .contacts__item--adress::before {
@@ -2086,22 +2123,23 @@ template {
     font-size: 24px;
     line-height: 36px;
   }
+
+  .page__centerer {
+    margin: 0 15px;
+  }
+
+  .page__centerer--header {
+    margin: 0;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-s@2x.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-s@2x.jpg") #e3ecf6;
   }
 
   .booking {
-    background: #011c40 center/cover no-repeat url("../img/booking-bkg-s@2x.png");
-  }
-}
-
-@media (max-width: 737px) {
-  .catalog__item {
-    max-width: 270px;
-    width: 100%;
+    background: #011c40 center/cover no-repeat url("../img/booking-bkg-s@2x.jpg");
   }
 }
 
@@ -2109,34 +2147,17 @@ template {
   .banner::before {
     top: -66px;
     min-height: 500px;
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-s.png");
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-s.jpg");
   }
 }
 
 @media (max-width: 419px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 419px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 419px) and (min-resolution: 144dpi), (max-width: 419px) and (min-resolution: 1.5dppx) {
   .banner::before {
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-s@2x.png");
-  }
-}
-
-@media (max-width: 338px) {
-  .catalog__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 auto;
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-s@2x.jpg");
   }
 }
 
 @media (min-width: 768px) and (max-width: 1365px) {
-  .page__centerer {
-    margin: 0 45px;
-  }
-
-  .page__centerer--header {
-    margin: 0;
-  }
-
   .header {
     height: 54px;
   }
@@ -2214,7 +2235,7 @@ template {
   }
 
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-m.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-m.jpg") #e3ecf6;
   }
 
   .advantages--wrapper {
@@ -2262,6 +2283,11 @@ template {
     padding-bottom: 100px;
   }
 
+  .catalog__item {
+    max-width: 309px;
+    width: 100%;
+  }
+
   .catalog-card {
     padding: 27px 35px;
   }
@@ -2273,7 +2299,7 @@ template {
   .booking {
     min-height: 805px;
     padding-top: 88px;
-    background: #011c40 center/cover no-repeat url("../img/booking-bkg-m.png");
+    background: #011c40 center/cover no-repeat url("../img/booking-bkg-m.jpg");
   }
 
   .booking h3 {
@@ -2303,6 +2329,18 @@ template {
     height: 335px;
   }
 
+  .contacts__item--adress::before {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  .contacts__item--phone::before {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
   .contacts__item--phone::before {
     height: 16px;
   }
@@ -2315,19 +2353,36 @@ template {
     font-size: 26px;
     line-height: 39px;
   }
+
+  .page__centerer {
+    margin: 0 45px;
+  }
+
+  .page__centerer--footer,
+  .page__centerer--advantages,
+  .page__centerer--contacts,
+  .page__centerer--article {
+    margin: 0 auto;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .page__centerer--header {
+    margin: 0;
+  }
 }
 
 @media (max-width: 1365px) and (min-width: 420px) {
   .banner::before {
     top: -54px;
     min-height: 638px;
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-m.png");
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-m.jpg");
   }
 }
 
 @media (max-width: 1365px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
   .banner::before {
-    background: #011c40 center/cover no-repeat url("../img/top-bkg-m@2x.png");
+    background: #011c40 center/cover no-repeat url("../img/top-bkg-m@2x.jpg");
   }
 }
 
@@ -2345,23 +2400,24 @@ template {
 
 @media (min-width: 768px) and (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 1.5dppx) {
   .advantages {
-    background: no-repeat center/cover url("../img/advantages/advantages-bkg-m@2x.png") #e3ecf6;
+    background: no-repeat center/cover url("../img/advantages/advantages-bkg-m@2x.jpg") #e3ecf6;
   }
 
   .booking {
-    background: #011c40 center/cover no-repeat url("../img/booking-bkg-m@2x.png");
+    background: #011c40 center/cover no-repeat url("../img/booking-bkg-m@2x.jpg");
   }
 }
 
-@media (min-width: 339px) and (max-width: 1365px) {
+@media (min-width: 1107px) and (max-width: 1365px) {
   .catalog__list {
-    margin: 0 60px;
+    max-width: 987px;
+    padding: 0 60px;
   }
 }
 
-@media (min-width: 738px) and (max-width: 1365px) {
-  .catalog__item {
-    max-width: 309px;
-    width: 100%;
+@media (min-width: 768px) and (max-width: 1106px) {
+  .catalog__list {
+    max-width: 648px;
+    padding: 0 60px;
   }
 }

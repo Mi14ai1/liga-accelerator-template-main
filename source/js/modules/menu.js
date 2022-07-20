@@ -5,7 +5,6 @@ import {
   navigation,
   headerLogo,
   hideMenu,
-  prevent,
   keyDownCloseHandler,
   clickOuthandler,
   onClickHideMenuHandler
@@ -36,8 +35,6 @@ const showMenu = () => {
   navigation.classList.remove('navigation--menu-close');
   navigation.classList.add('navigation--menu-open');
   headerLogo.classList.add('header-logo--menu-open');
-  document.addEventListener('wheel', prevent, {passive: false});
-  document.addEventListener('touchmove', prevent, {passive: false});
   document.addEventListener('keydown', keyDownCloseHandler);
   document.addEventListener('click', clickOuthandler);
   navigation.addEventListener('click', onClickHideMenuHandler);

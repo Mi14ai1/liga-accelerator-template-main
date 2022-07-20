@@ -4,33 +4,33 @@
   padding-top: 50px;
 
   @media #{$wide-vp} {
-    background: $color-tangaroa no-repeat center/ cover url("../img/booking-bkg-l.png");
+    background: $color-tangaroa no-repeat center/ cover url("../img/booking-bkg-l.jpg");
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-l@2x.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-l@2x.jpg");
     }
   }
 
   @media #{$middle-vp} {
     min-height: 805px;
     padding-top: 88px;
-    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m.png");
+    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m.jpg");
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m@2x.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-m@2x.jpg");
     }
   }
 
   @media #{$narrow-vp} {
     min-height: 760px;
     padding-top: 59px;
-    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s.png");
+    background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s.jpg");
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s@2x.png");
+      background: $color-tangaroa center/ cover no-repeat url("../img/booking-bkg-s@2x.jpg");
     }
   }
 }
