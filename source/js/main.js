@@ -1,5 +1,5 @@
 import {disableButton} from './modules/form';
-import {toggleMenu, resizeHandler} from './modules/menu.js';
+import {checkingSize, resizeHandler} from './modules/menu.js';
 
 const noScriptMap = document.querySelector('noscript');
 const interactiveMap = document.querySelector('iframe.contacts__map');
@@ -10,6 +10,6 @@ noScriptMap.classList.add('contacts__map--noscript');
 interactiveMap.classList.remove('contacts__map--noscript');
 window.addEventListener('resize', resizeHandler);
 
-toggleMenu();
+checkingSize();
 
 disableButton();

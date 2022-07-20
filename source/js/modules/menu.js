@@ -1,10 +1,17 @@
+import {
+  body,
+  header,
+  burger,
+  navigation,
+  headerLogo,
+  hideMenu,
+  prevent,
+  keyDownCloseHandler,
+  clickOuthandler,
+  onClickHideMenuHandler
+} from './handlers.js';
 const MOBILEVIEWPORT = 768;
 
-const body = document.querySelector('.body');
-const header = body.querySelector('.header');
-const burger = header.querySelector('.navigation__button');
-const navigation = header.querySelector('.navigation');
-const headerLogo = header.querySelector('.header-logo');
 
 if (navigation.classList.contains('navigation--noscript')) {
   navigation.classList.remove('navigation--noscript');
@@ -22,27 +29,6 @@ if (!navigation.classList.contains('navigation--menu-close')) {
   navigation.classList.add('navigation--menu-close');
 }
 
-const prevent = (ev) => ev.preventDefault();
-
-const resizeHandler = () => {
-  if (document.documentElement.clientWidth > MOBILEVIEWPORT) {
-    document.removeEventListener('wheel', prevent);
-    document.removeEventListener('wheel', prevent, {passive: false});
-    document.removeEventListener('touchmove', prevent, {passive: false});
-  }
-};
-
-const hideMenu = () => {
-  body.classList.remove('body--menu-open');
-  burger.classList.add('navigation__button--open');
-  burger.classList.remove('navigation__button--close');
-  navigation.classList.remove('navigation--menu-open');
-  navigation.classList.add('navigation--menu-close');
-  headerLogo.classList.remove('header-logo--menu-open');
-  document.removeEventListener('wheel', prevent);
-  document.removeEventListener('touchmove', prevent, {passive: false});
-};
-
 const showMenu = () => {
   body.classList.add('body--menu-open');
   burger.classList.remove('navigation__button--open');
@@ -52,9 +38,12 @@ const showMenu = () => {
   headerLogo.classList.add('header-logo--menu-open');
   document.addEventListener('wheel', prevent, {passive: false});
   document.addEventListener('touchmove', prevent, {passive: false});
+  document.addEventListener('keydown', keyDownCloseHandler);
+  document.addEventListener('click', clickOuthandler);
+  navigation.addEventListener('click', onClickHideMenuHandler);
 };
 
-const menuToggler = () => {
+const toggleMenuHandler = () => {
   if (burger.classList.contains('navigation__button--open')) {
     showMenu();
   } else {
@@ -62,16 +51,28 @@ const menuToggler = () => {
   }
 };
 
-const onClickHideMenuHandler = (evt) => {
-  if (evt.target.classList.contains('navigation__link') | evt.target === burger) {
-    menuToggler();
+const clickOnBurger = () => {
+  burger.addEventListener('click', toggleMenuHandler);
+};
+
+
+const resizeHandler = () => {
+  if (document.documentElement.clientWidth >= MOBILEVIEWPORT) {
+    hideMenu();
+    burger.removeEventListener('click', toggleMenuHandler);
+  } else {
+    clickOnBurger();
   }
 };
-const toggleMenu = () => {
-  navigation.addEventListener('click', onClickHideMenuHandler);
+
+
+const checkingSize = () => {
+  if (document.documentElement.clientWidth < MOBILEVIEWPORT) {
+    clickOnBurger();
+  }
 };
 
 export {
-  toggleMenu,
+  checkingSize,
   resizeHandler
 };

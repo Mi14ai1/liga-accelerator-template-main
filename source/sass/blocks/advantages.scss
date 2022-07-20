@@ -1,7 +1,33 @@
 .advantages {
   position: relative;
-  background: no-repeat center/ cover url("../img/advantages/advantages-bkg-l.png") #e3ecf6;
   background-blend-mode: lighten;
+
+  @media #{$wide-vp} {
+    background: no-repeat center/ cover url("../img/advantages/advantages-bkg-l.png") #e3ecf6;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: no-repeat center/ cover url("../img/advantages/advantages-bkg-l@2x.png") #e3ecf6;
+    }
+  }
+
+  @media #{$middle-vp} {
+    background: no-repeat center/ cover url("../img/advantages/advantages-bkg-m.png") #e3ecf6;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: no-repeat center/ cover url("../img/advantages/advantages-bkg-m@2x.png") #e3ecf6;
+    }
+  }
+
+  @media #{$narrow-vp} {
+    background: no-repeat center/ cover url("../img/advantages/advantages-bkg-s.png") #e3ecf6;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: no-repeat center/ cover url("../img/advantages/advantages-bkg-s@2x.png") #e3ecf6;
+    }
+  }
 }
 
 .advantages--wrapper {
