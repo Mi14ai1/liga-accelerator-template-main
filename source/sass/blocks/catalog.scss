@@ -13,19 +13,22 @@
   @media #{$narrow-vp} {
     gap: 30px;
     padding-top: 57px;
-    padding-bottom: 65px;
+    padding-bottom: 35px;
   }
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
   max-width: 1130px;
   list-style: none;
   padding: 0;
 
   margin: 0 auto;
+
+  @media #{$not-narrow-vp} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 
   @media (min-width: 1024px) and (max-width: 1280px) {
     max-width: 840px;
@@ -55,7 +58,7 @@
   }
 
   @media (max-width: 767px) {
-    max-width: 270px;
-    width: 100%;
+    width: 270px;
+    margin: 0 0 30px;
   }
 }

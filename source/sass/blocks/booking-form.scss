@@ -1,14 +1,17 @@
 .booking-form {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
   grid-area: 1/2/3/3;
   max-width: 403px;
   min-height: 455px;
 
   padding: 44px 50px 50px;
   background: $color-tangaroa;
+
+  @media #{$not-narrow-vp} {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
 
   @media #{$narrow-vp} {
     max-width: 100%;
@@ -24,10 +27,16 @@
 }
 
 .booking-form__input-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 20px;
+  @media #{$not-narrow-vp} {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+  }
+
+  @media #{$narrow-vp} {
+    margin-bottom: 26px;
+  }
 }
 
 .booking-form input:not(input[type="checkbox"]) {
@@ -54,6 +63,11 @@
     font-size: 14px;
     line-height: 21px;
     color: $palceholder-color;
+  }
+
+  @media #{$narrow-vp} {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -146,6 +160,7 @@
   @media #{$narrow-vp} {
     line-height: 25px;
     text-align: center;
+    margin-bottom: 27px;
   }
 }
 
