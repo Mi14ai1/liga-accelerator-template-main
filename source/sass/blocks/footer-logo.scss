@@ -8,9 +8,10 @@
 }
 
 .footer-logo {
+  align-self: flex-start;
+
   @media #{$narrow-vp} {
     display: flex;
-    align-self: flex-start;
     width: 44px;
   }
 }

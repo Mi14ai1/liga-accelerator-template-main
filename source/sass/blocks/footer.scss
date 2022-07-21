@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   padding: 50px 0 45px;
+  gap: 20px;
 
   @media #{$middle-vp} {
     padding: 48px 0 44px;
@@ -47,6 +48,7 @@
   padding: 0 0 1px;
   margin: 0;
   list-style: none;
+  flex-wrap: wrap;
 
   @media #{$not-wide-vp} {
     gap: 23px;
@@ -60,6 +62,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+}
+
+.footer__social-list {
+  transform: translate(-5px, 11px);
+
+  @media #{$not-narrow-vp} {
+    align-self: flex-start;
+  }
+
+  @media #{$not-wide-vp} {
+    transform: translateX(-3px);
+  }
+
+  @media #{$middle-vp} {
+    transform: translate(-3px, 4px);
   }
 }
 

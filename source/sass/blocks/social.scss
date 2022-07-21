@@ -7,15 +7,9 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  transform: translateX(-5px);
-
-  @media #{$not-wide-vp} {
-    transform: translateX(-3px);
-  }
 
   @media #{$middle-vp} {
     gap: 22px;
-    transform: translate(-3px, -2px);
   }
 
   @media #{$narrow-vp} {

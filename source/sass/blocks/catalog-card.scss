@@ -128,11 +128,26 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap: 12px;
   padding: 0;
   margin: 0;
   list-style: none;
-  overflow-y: scroll;
-  gap: 12px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $color-tangaroa $hover-color;
+}
+
+.catalog-card__list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.catalog-card__list::-webkit-scrollbar-track {
+  background: $hover-color;
+}
+
+.catalog-card__list::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: $color-tangaroa;
 }
 
 .catalog-card:hover .catalog-card__description,
