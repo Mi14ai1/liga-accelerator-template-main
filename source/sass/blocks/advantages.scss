@@ -31,16 +31,18 @@
 }
 
 .advantages--wrapper {
-
-  display: flex;
-  flex-direction: column;
-  gap: 49px;
   box-sizing: border-box;
   width: 100%;
   min-height: 562px;
   height: 100%;
   padding-top: 110px;
   padding-bottom: 120px;
+
+  @media #{$not-narrow-vp} {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+  }
 
   @media #{$middle-vp} {
     padding-top: 90px;
@@ -50,26 +52,33 @@
 
   @media #{$narrow-vp} {
     padding-top: 58px;
-    padding-bottom: 65px;
-    gap: 30px;
+    padding-bottom: 35px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .advantages__list {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
   list-style: none;
   padding: 0;
   z-index: 1;
+
+  @media #{$not-narrow-vp} {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
 
   @media #{$middle-vp} {
     gap: 30px;
   }
 
   @media #{$narrow-vp} {
-    flex-direction: column;
-    gap: 30px;
+    .advantages__item {
+      margin-bottom: 30px;
+    }
   }
 }

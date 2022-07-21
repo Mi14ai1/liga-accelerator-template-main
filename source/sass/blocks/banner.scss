@@ -71,14 +71,17 @@ section.banner--noscript::before {
 
 .banner__wrapper {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   max-width: 1366px;
   min-height: 574px;
   margin: 0 auto;
   padding-top: 197px;
   padding-left: 198px;
+
+  @media #{$not-narrow-vp} {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
   @media #{$middle-vp} {
     gap: 11px;
@@ -128,6 +131,7 @@ section.banner--noscript::before {
   @media #{$narrow-vp} {
     font-size: 36px;
     line-height: 45px;
+    margin-bottom: 11px;
   }
 }
 
