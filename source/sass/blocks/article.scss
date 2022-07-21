@@ -3,7 +3,7 @@
   justify-content: space-between;
   gap: 70px;
   align-items: flex-start;
-  padding: 120px 103px 115px;
+  padding: 120px 103px 116px;
 
   @media #{$middle-vp} {
     gap: 30px;
@@ -95,6 +95,7 @@
 .article__image {
   flex-shrink: 0;
   flex-grow: 1;
+  width: calc(48% + 3px);
 
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 48%;

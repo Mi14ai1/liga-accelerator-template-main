@@ -34,12 +34,13 @@
 
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 49px;
   box-sizing: border-box;
   width: 100%;
   min-height: 562px;
   height: 100%;
-  padding-top: 109px;
+  padding-top: 110px;
+  padding-bottom: 120px;
 
   @media #{$middle-vp} {
     padding-top: 90px;
