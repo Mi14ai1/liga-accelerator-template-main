@@ -4,6 +4,7 @@
 
 .navigation__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 33px;
   line-height: 0;
   list-style: none;
@@ -21,6 +22,10 @@
     margin: 23px 0 0 10px;
     flex-direction: column;
   }
+}
+
+.navigation__item {
+  max-width: 170px;
 }
 
 .navigation__link {
