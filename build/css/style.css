@@ -808,7 +808,7 @@ template {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  padding: 120px 103px 115px;
+  padding: 120px 103px 116px;
 }
 
 .article h2 {
@@ -867,6 +867,7 @@ template {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: calc(48% + 3px);
 }
 
 .advantages {
@@ -882,13 +883,14 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 50px;
+  gap: 49px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   min-height: 562px;
   height: 100%;
-  padding-top: 109px;
+  padding-top: 110px;
+  padding-bottom: 120px;
 }
 
 .advantages__list {
@@ -919,6 +921,7 @@ template {
   gap: 8px;
   max-width: 360px;
   min-height: 241px;
+  height: 100%;
   padding: 81px 30px 25px;
   background: #f9fbfd;
   opacity: 1;
@@ -983,7 +986,7 @@ template {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 49px;
-  padding-top: 111px;
+  padding-top: 110px;
   padding-bottom: 120px;
 }
 
@@ -1449,7 +1452,8 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 120px 0;
+  gap: 30px;
+  padding: 120px 60px;
 }
 
 .contacts__map {
@@ -2276,6 +2280,11 @@ template {
     padding-bottom: 100px;
   }
 
+  .catalog__list {
+    max-width: 648px;
+    padding: 0 60px;
+  }
+
   .catalog-card {
     padding: 27px 35px;
   }
@@ -2303,7 +2312,6 @@ template {
   }
 
   .contacts {
-    gap: 30px;
     padding: 100px 0;
   }
 
@@ -2409,14 +2417,14 @@ template {
 
 @media (min-width: 1107px) and (max-width: 1365px) {
   .catalog__list {
-    max-width: 987px;
+    max-width: 840px;
     padding: 0 60px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1106px) {
+@media (min-width: 1025px) and (max-width: 1106px) {
   .catalog__list {
-    max-width: 648px;
+    max-width: 570px;
     padding: 0 60px;
   }
 }
