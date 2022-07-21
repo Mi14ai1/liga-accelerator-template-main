@@ -1622,7 +1622,7 @@ template {
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) {
   .header {
     height: 76px;
   }
@@ -1675,6 +1675,7 @@ template {
     -webkit-column-gap: 40px;
     -moz-column-gap: 40px;
     column-gap: 40px;
+    padding: 0 20px;
   }
 
   .booking h3,
@@ -1683,9 +1684,13 @@ template {
     -ms-grid-column-span: 1;
     grid-column: 1/2;
   }
+
+  .page__centerer--advantages {
+    padding: 0 20px;
+  }
 }
 
-@media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 144dpi), (min-width: 1366px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-l@2x.jpg");
   }
@@ -1699,7 +1704,7 @@ template {
   }
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1023px) {
   .footer__navigation-list {
     gap: 23px;
   }
@@ -2157,7 +2162,7 @@ template {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .header {
     height: 54px;
   }
@@ -2230,10 +2235,6 @@ template {
     max-width: 260px;
   }
 
-  .article__image {
-    width: 48%;
-  }
-
   .advantages {
     background: no-repeat center/cover url("../img/advantages/advantages-bkg-m.jpg") #e3ecf6;
   }
@@ -2281,11 +2282,6 @@ template {
   .catalog {
     padding-top: 90px;
     padding-bottom: 100px;
-  }
-
-  .catalog__item {
-    max-width: 309px;
-    width: 100%;
   }
 
   .catalog-card {
@@ -2372,7 +2368,7 @@ template {
   }
 }
 
-@media (max-width: 1365px) and (min-width: 420px) {
+@media (max-width: 1024px) and (min-width: 420px) {
   .banner::before {
     top: -54px;
     min-height: 638px;
@@ -2380,7 +2376,7 @@ template {
   }
 }
 
-@media (max-width: 1365px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1024px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1024px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1024px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1024px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
   .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-m@2x.jpg");
   }
@@ -2398,7 +2394,18 @@ template {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1365px) and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .article__image {
+    width: 48%;
+  }
+
+  .catalog__item {
+    max-width: 309px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .advantages {
     background: no-repeat center/cover url("../img/advantages/advantages-bkg-m@2x.jpg") #e3ecf6;
   }

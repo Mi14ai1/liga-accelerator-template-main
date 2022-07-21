@@ -39,9 +39,9 @@ $ff-placeholder: "Montserrat", "Arial", sans-serif;
 
 $narrow-vp: "(max-width: 767px)";
 $not-narrow-vp: "(min-width: 768px)";
-$middle-vp: "(min-width: 768px) and (max-width: 1365px)";
-$wide-vp: "(min-width: 1366px)";
-$not-wide-vp: "(max-width: 1365px)";
+$middle-vp: "(min-width: 768px) and (max-width: 1023px)";
+$wide-vp: "(min-width: 1024px)";
+$not-wide-vp: "(max-width: 1023px)";
 
 // Retina
 // ---------------------------------

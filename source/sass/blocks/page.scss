@@ -6,6 +6,12 @@
   max-width: 1160px;
   margin: 0 auto;
 
+  @media #{$wide-vp} {
+    &--advantages {
+      padding: 0 20px;
+    }
+  }
+
   @media #{$middle-vp} {
     margin: 0 45px;
 
