@@ -11,7 +11,7 @@
   background: $color-tangaroa;
 
   @media #{$narrow-vp} {
-    max-width: 290px;
+    max-width: 100%;
     min-height: 460px;
     padding: 36px 30px 40px;
   }

@@ -708,6 +708,8 @@
                     type="text"
                     name="name"
                     id="name"
+                    title="Введите только имя"
+                    pattern="^[aа-zяAА-ZЯ][aа-zяAА-ZЯ0-9-_\.]{1,20}$"
                     placeholder="Имя"
                     required
                   />
@@ -718,10 +720,9 @@
                     name="phone"
                     id="phone"
                     placeholder="Телефон"
-                    title="Введите номер телефона без кода страны"
-                    pattern="[0-9]{10}"
+                    title="Введите номер телефона"
+                    pattern="\+?[0-9\s\-\(\)]+"
                     required
-                    maxlength="10"
                   />
                   <label class="booking-form__label visually-hidden" for="email"
                     >Email</label>

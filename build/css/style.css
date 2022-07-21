@@ -395,17 +395,9 @@ template {
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/montserrat-extrabold.woff2") format("woff2"), url("../fonts/montserrat-extrabold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
 }
 
 @font-face {
@@ -2083,7 +2075,7 @@ template {
   }
 
   .booking-form {
-    max-width: 290px;
+    max-width: 100%;
     min-height: 460px;
     padding: 36px 30px 40px;
   }
@@ -2368,7 +2360,7 @@ template {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 420px) {
+@media (max-width: 1023px) and (min-width: 420px) {
   .banner::before {
     top: -54px;
     min-height: 638px;
@@ -2376,7 +2368,7 @@ template {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1024px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1024px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1024px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1023px) and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-width: 420px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-width: 420px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-width: 420px) and (min-resolution: 1.5dppx) {
   .banner::before {
     background: #011c40 center/cover no-repeat url("../img/top-bkg-m@2x.jpg");
   }
