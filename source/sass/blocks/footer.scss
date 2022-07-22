@@ -32,12 +32,12 @@
 .footer__navigation {
   @media #{$not-narrow-vp} {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 30px;
   }
 
   @media #{$middle-vp} {
-    gap: 25px;
+    gap: 15px;
   }
 
   @media #{$narrow-vp} {
@@ -50,11 +50,14 @@
   margin: 0;
   list-style: none;
 
+
   @media #{$not-narrow-vp} {
     display: flex;
     align-items: center;
     gap: 33px;
     flex-wrap: wrap;
+    padding: 10px;
+    max-width: 600px;
   }
 
   @media #{$not-wide-vp} {
@@ -62,7 +65,8 @@
   }
 
   @media #{$middle-vp} {
-    padding-bottom: 6px;
+    max-width: 480px;
+    padding: 2px 10px;
   }
 
   @media #{$narrow-vp} {
