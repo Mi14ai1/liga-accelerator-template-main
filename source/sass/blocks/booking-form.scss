@@ -42,10 +42,10 @@
 .booking-form input:not(input[type="checkbox"]) {
   box-sizing: border-box;
   font-family: $ff-montserrat;
-  font-size: 21px;
+  font-size: 14px;
   font-weight: 400;
   color: $color-tangaroa;
-  line-height: 14px;
+  line-height: 21px;
   min-height: 43px;
   padding: 5px 17px 9px;
   border: none;
@@ -62,6 +62,7 @@
     font-family: $ff-montserrat;
     font-size: 14px;
     line-height: 21px;
+    font-weight: 400;
     color: $palceholder-color;
   }
 

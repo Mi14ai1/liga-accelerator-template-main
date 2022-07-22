@@ -1203,10 +1203,10 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 21px;
+  font-size: 14px;
   font-weight: 400;
   color: #011c40;
-  line-height: 14px;
+  line-height: 21px;
   min-height: 43px;
   padding: 5px 17px 9px;
   border: none;
@@ -1225,6 +1225,7 @@ template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1232,6 +1233,7 @@ template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1239,6 +1241,7 @@ template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1246,6 +1249,7 @@ template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1253,6 +1257,7 @@ template {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1545,14 +1550,18 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     gap: 33px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 10px;
     max-width: 600px;
+  }
+
+  .footer__navigation-item {
+    max-width: 180px;
   }
 
   .footer__social-list {
@@ -1940,7 +1949,7 @@ template {
     grid-template-rows: 42px 1fr;
     right: 0;
     top: 0;
-    width: calc(100% - 35px);
+    width: 285px;
     height: 100%;
     padding: 20px 15px 20px;
     background: #f9fbfd;
