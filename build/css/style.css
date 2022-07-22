@@ -1616,12 +1616,11 @@ template {
   }
 
   .advantages__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 40px;
   }
 
@@ -1728,6 +1727,10 @@ template {
 
   .advantages {
     background: no-repeat center/cover url("../img/advantages/advantages-bkg-l.jpg") #e3ecf6;
+  }
+
+  .advantages__list {
+    max-width: 1200px;
   }
 
   .advantage-card--boat p {
@@ -2352,6 +2355,8 @@ template {
   }
 
   .advantages__list {
+    grid-template-columns: repeat(auto-fit, 206px);
+    max-width: 768px;
     gap: 30px;
   }
 
@@ -2522,6 +2527,12 @@ template {
 
   .booking {
     background: #011c40 center/cover no-repeat url("../img/booking-bkg-m@2x.jpg");
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .advantages__list {
+    max-width: 760px;
   }
 }
 

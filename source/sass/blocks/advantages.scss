@@ -67,12 +67,23 @@
   z-index: 1;
 
   @media #{$not-narrow-vp} {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    flex-wrap: wrap;
     gap: 40px;
   }
 
+  @media #{$wide-vp} {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    max-width: 760px;
+  }
+
   @media #{$middle-vp} {
+    grid-template-columns: repeat(auto-fit, 206px);
+    max-width: 768px;
     gap: 30px;
   }
 
