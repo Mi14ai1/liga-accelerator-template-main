@@ -1,7 +1,7 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   padding: 120px 60px;
 
@@ -11,6 +11,7 @@
 
   @media #{$narrow-vp} {
     flex-flow: column-reverse;
+    align-items: center;
     gap: 0;
     padding: 58px 0 64px;
   }
@@ -35,6 +36,10 @@
   max-width: 489px;
   padding-right: 11px;
 
+  @media #{$wide-vp} {
+    padding-top: 72px;
+  }
+
   @media #{$not-narrow-vp} {
     display: flex;
     flex-direction: column;
@@ -45,6 +50,10 @@
   @media #{$not-wide-vp} {
     gap: 27px;
     padding: 0;
+  }
+
+  @media #{$middle-vp} {
+    padding-top: 64px;
   }
 
   @media #{$narrow-vp} {
